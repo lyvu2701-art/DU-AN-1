@@ -1,7 +1,9 @@
 let DaDangNhap = localStorage.getItem("DaDangNhap");
 let users = JSON.parse(localStorage.getItem("users"));
 let root = users[DaDangNhap].drive;
-console.log(root);
+document.getElementById("TaoFile").onclick = function(){
+    document.querySelector(".taofile").style.display = "flex";
+}
 function taoFolder(){
     let name = document.getElementById("tenFolderMoi").value.trim();
     if(!name){

@@ -7,14 +7,14 @@
     height: 100%;
     /*width: 100%;*/
 }
-.lopPhu{
+/*.lopPhu{
     position: absolute;
     background: radial-gradient(circle, transparent 25%, rgb(202, 221, 227) 100%);
     width: 100%;
     height: 100%;
     top: 0;
     z-index: 5;
-}
+}*/
 .quanLiFile{
     position: absolute;
     display: flex;
@@ -81,6 +81,7 @@ li:hover>ol{
 }
 .taofile{
     display:flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     width: 400px;
@@ -110,16 +111,8 @@ li:hover>ol{
     background-color: lightblue;
     border: none;
 }
-.taofile,
-.lopPhu {
-    display: none;
-}
-#openCreate:checked ~ .nentrang .taofile,
-#openCreate:checked ~ .nentrang .lopPhu {
-    display: block;
-}
 #fileTree {
-    position: relative;
+    position: absolute;
     z-index: 20; /* tốt rồi */
 }
 #fileTree div {
