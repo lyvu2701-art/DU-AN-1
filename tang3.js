@@ -5,7 +5,7 @@ console.log(root);
 function taoFolder(){
     let name = document.getElementById("tenFolderMoi").value.trim();
     if(!name){
-        alert("hãy tạo folder")
+        alert("Hãy tạo folder!")
     }
     root.children[name] = {
         type: "folder",
