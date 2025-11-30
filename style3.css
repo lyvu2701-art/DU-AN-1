@@ -48,6 +48,9 @@
     border: 1px solid white;
     
 }
+.quanLiFile p{
+    padding-top:10px;
+}
 ol{
     position: absolute;
     top: 70px;
