@@ -7,6 +7,7 @@ function dangKy(){
     let users = JSON.parse(localStorage.getItem("users")) || {};
     if (users[username]){
         var input = document.getElementsByName("ten")[0];
+        input.value="";
         input.placeholder = "Tên đã tồn tại!";
         return input.placeholder;
     }

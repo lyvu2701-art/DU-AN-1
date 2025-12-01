@@ -10,8 +10,9 @@ function dangNhap(){
     }
     if (users[username].password !== password){
         var input = document.getElementsByName("matKhau")[0];
+        input.value="";
         input.placeholder = "Sai mật khẩu!";
-        return input.placeholder;
+        return input;
     }
 
     localStorage.setItem("DaDangNhap", username);
