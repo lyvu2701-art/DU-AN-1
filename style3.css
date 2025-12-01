@@ -26,6 +26,7 @@
     background-color: lightblue;
     margin:auto;
     padding:10px;
+    position:fixed;
 }
 .quanLiFile>div{
     display: flex;
