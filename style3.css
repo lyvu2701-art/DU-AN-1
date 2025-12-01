@@ -16,15 +16,14 @@
     z-index: 5;
 }*/
 .quanLiFile{
-    position: absolute;
     display: flex;
-    width: 80%;
+    width: 85%;
+    height:8%;
     gap: 50px;
-    top: 10px;
+    top: 0px;
     left: 15%;
     color:rgb(20, 57, 106);
     background-color: lightblue;
-    margin:auto;
     padding:10px;
     position:fixed;
 }
@@ -34,10 +33,6 @@
     height: 40px;
     border: 1px solid black;
     border-radius: 10px;
-}
-.ol{
-    color:rgb(20, 57, 106);
-    background-color: lightblue;
 }
 .quanLiFile input{
     width: 90%;
@@ -56,12 +51,22 @@
 .quanLiFile p{
     padding-top:10px;
 }
+.khungdoc{
+    gap:10px;
+    background-color: lightblue;
+    color:rgb(20, 57, 106);
+    z-index: 1;
+    top:0px;
+    position:fixed;
+    height:100%;
+    width:15%;
+}
 ol{
-    position: absolute;
+    /*position: absolute;*/
     top: 70px;
 }
 ol li{
-    position: relative;
+    /*position: relative;*/
     height: 30px;
     border: 1px solid white;
     width: 110px;
@@ -70,7 +75,7 @@ ol li{
     background-color: lightblue;
 }
 li>ol{
-    position: absolute;
+    /*position: absolute;*/
     top: 100%;
     display: none;
 }
@@ -115,7 +120,8 @@ li:hover>ol{
 #fileTree {
     position: absolute;
     z-index: 20; /* tốt rồi */
-    top: 100px;
+    top: 80px;
+    right:20px;
 }
 #fileTree div {
     position: relative; /* không absolute nữa */
