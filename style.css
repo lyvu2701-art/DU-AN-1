@@ -28,6 +28,7 @@
     width: 100%;
     height: 30%;
     padding: 20px;
+    border-radius: 10px;
 }
 .dangnhap  button{
     color:white;
@@ -39,6 +40,7 @@
     margin-top: 2%;
     margin-bottom: 1%;
     border-style: none;
+    cursor:pointer;
 }
 .dangnhap a{
     color:blue;
@@ -65,6 +67,7 @@
     width: 100%;
     height: 30%;
     padding: 20px;
+    border-radius: 10px;
 }
 .dangky button{
     color:white;
@@ -76,6 +79,7 @@
     border-style: none;
     margin-left:27%;
     margin-top: 2%;
+    cursor:pointer;
 }
 .dangky  button:hover{
     background-color: rgb(54, 169, 219);
