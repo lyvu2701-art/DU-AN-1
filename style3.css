@@ -47,6 +47,10 @@
     border: 1px solid white;
 
 }
+.logotimkiem{
+    margin-top:1px;
+    border-radius: 10px;
+}
 .avatar{
     border-radius: 10px;
     border: 1px solid white;
@@ -56,7 +60,7 @@
     margin-top: 12px;
 }
 .quanLiFile h3{
-    padding-top:10px;
+    padding-top:20px;
     padding-left: 25px;
 }
 .khungdoc{
@@ -70,22 +74,24 @@
     width:15%;
 }
 ol{
-    top: 70px;
+    margin-top: 10px;
 }
 ol li{
+    padding-left: 10px;
     height: 30px;
-    border: 1px solid white;
-    width: 110px;
+    border-radius: 10px;
+    width: 120px;
     padding-top: 7px;
     color:rgb(20, 57, 106);
     background-color: lightblue;
 }
 li>ol{
-    top: 100%;
+    margin-top:10%;
+    margin-left:-41%;
     display: none;
 }
 li:hover{
-    text-decoration: underline;
+    background-color: rgb(137, 189, 221);
 }
 li:hover>ol{
     display: block;
