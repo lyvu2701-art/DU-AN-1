@@ -45,7 +45,7 @@
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     border: 1px solid white;
-
+    cursor:pointer;
 }
 .logotimkiem{
     margin-top:1px;
@@ -58,10 +58,12 @@
     width:3%;
     height:60%;
     margin-top: 12px;
+    cursor:pointer;
 }
 .quanLiFile h3{
     padding-top:20px;
-    padding-left: 55px;
+    padding-left: 30px;
+    cursor:pointer;
 }
 .khungdoc{
     gap:10px;
@@ -84,6 +86,7 @@ ol li{
     padding-top: 7px;
     color:rgb(20, 57, 106);
     background-color: lightblue;
+    cursor:pointer;
 }
 li>ol{
     margin-top:10%;
