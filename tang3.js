@@ -52,34 +52,36 @@ function HienThiFolder(Folder, contain){
         b.textContent = name + (Folder.children[name].type ==="folder"?"/":"");
         item.appendChild(b);
         let c = document.createElement("button");
-        c.id = "doiTen";
+        //c.id = "doiTen";
         c.type = "button";
         c.textContent = "doi ten";
+        c.onclick = () => suaFolder(Folder, name);
         item.appendChild(c);
         let d = document.createElement("button");
-        d.id = "xoa";
+        //d.id = "xoa";
         d.type = "button";
         d.textContent = "Xoa";
+        d.onclick = () => Xoa(Folder, name);
         item.appendChild(d);
         
         //item.style.cursor = "pointer";
         // click để đổi tên
-        item.ondblclick = () => suaFolder(Folder, name);
-        item.onclick = (e) => {
+        
+        /*item.onclick = (e) => {
             e.stopPropagation(); // quan trọng
             HienThiFolder(Folder.children[name], contain);
-}
+}*/
         // click để mở file
         if (Folder.children[name].type === "folder"){
-            item.onclick = () => {
+            b.onclick = () => {
                 HienThiFolder(Folder.children[name], contain);
             }
         }
         //click chuột phải để xóa
-        item.oncontextmenu = (e) => {
+        /*item.oncontextmenu = (e) => {
             e.preventDefault();
             Xoa(Folder, name);
-        }
+        }*/
         contain.appendChild(item);
     }
 }
