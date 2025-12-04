@@ -4,6 +4,9 @@ let root = users[DaDangNhap].drive;
 document.getElementById("TaoFile").onclick = function(){
     document.querySelector(".taofile").style.display = "flex";
 }
+document.getElementById("tat").onclick = function(){
+    document.querySelector(".taofile").style.display = "none";
+}
 function taoFolder(){
     let name = document.getElementById("tenFolderMoi").value.trim();
     if(!name){
@@ -59,7 +62,7 @@ function HienThiFolder(Folder, contain){
         d.textContent = "Xoa";
         item.appendChild(d);
         
-        item.style.cursor = "pointer";
+        //item.style.cursor = "pointer";
         // click để đổi tên
         item.ondblclick = () => suaFolder(Folder, name);
         item.onclick = (e) => {
