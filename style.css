@@ -19,12 +19,10 @@
     height:100%;
     background-color: white;
     text-align: center;
-    padding-top:4%;
     padding-left: 4%;
-    padding-bottom: 4%;
     background-color: rgb(243, 249, 250);
-    padding-top:15%;
-    padding-bottom: 16%;
+    padding-top:14%; 
+    padding-bottom: 15%;
 }
 .dangnhap{
     width:90%;
