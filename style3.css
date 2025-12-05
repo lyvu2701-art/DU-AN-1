@@ -5,43 +5,33 @@
     position: relative;
     height: 100%;
 }
-/*.lopPhu{
-    position: absolute;
-    background: radial-gradient(circle, transparent 25%, rgb(202, 221, 227) 100%);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 5;
-}*/
 .quanLiFile{
     display: flex;
     width: 100%;
-    height:8%;
-    gap: 80px;
-    top: 0px;
+    height:12%;
     color:rgb(20, 57, 106);
     background-color: lightblue;
-    padding:10px;
+    padding-top:1%;
     position:fixed;
 }
 .quanLiFile>div{
     display: flex;
-    width: 60%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
     border: 1px solid white;
-    border-radius: 10px;
-    margin-right: 45px;
-    margin-top: 10px;
+    border-radius: 20px;
+    margin-left: 11%;
+    margin-top: 1%;
 }
 .quanLiFile input{
     width: 95%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     border: 1px solid white;
 }
 .quanLiFile button{
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     border: 1px solid white;
     cursor:pointer;
 }
@@ -50,49 +40,46 @@
     border-radius: 10px;
 }
 .avatar{
-    border-radius: 100%;
-    border: 1px solid lightblue;
-    margin-left: 10%;
-    width:3%;
-    height:60%;
-    margin-top: 12px;
+    margin-left: 29%;
+    margin-top: 1%;
+    width:7%;
+    height:56%;
     cursor:pointer;
 }
-.quanLiFile h3{
-    padding-top:20px;
-    padding-left: 30px;
+.quanLiFile h2{
+    margin-top:2%;
+    margin-left:1%;
     cursor:pointer;
 }
 .khungdoc{
-    gap:10px;
-    background-color: lightblue;
+    background-color: rgb(231, 244, 248);
     color:rgb(20, 57, 106);
-    z-index: 1;
-    top:10%;
+    z-index: -1;
+    top:13%;
     position:fixed;
-    height:100%;
+    height:88%;
     width:15%;
 }
 ol{
-    margin-top: 10px;
+    margin-top: 4%;
 }
 ol li{
-    padding-left: 10px;
+    padding-left: 4%;
     height: 30px;
     border-radius: 10px;
     width: 120px;
-    padding-top: 7px;
+    padding-top:5%;
     color:rgb(20, 57, 106);
-    background-color: lightblue;
+    background-color: rgb(231, 244, 248);
     cursor:pointer;
 }
 li>ol{
     margin-top:10%;
-    margin-left:-41%;
+    margin-left:-39%;
     display: none;
 }
 li:hover{
-    background-color: rgb(137, 189, 221);
+    background-color: lightblue;
 }
 li:hover>ol{
     display: block;
@@ -138,11 +125,11 @@ li:hover>ol{
 }
 #fileTree {
     position: absolute;
-    z-index: 20; /* tốt rồi */
+    z-index: 20;
     top: 80px;
     right:20px;
 }
 #fileTree div {
-    position: relative; /* không absolute nữa */
+    position: relative; 
     cursor: pointer;
 }
