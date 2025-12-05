@@ -73,9 +73,9 @@ function HienThiFolder(Folder, contain){
 }*/
         // click để mở file
         if (Folder.children[name].type === "folder"){
-            b.onclick = () => {
+            b.onclick = () => window.location.href = "trang4.html";/*{
                 HienThiFolder(Folder.children[name], contain);
-            }
+            }*/
         }
         //click chuột phải để xóa
         /*item.oncontextmenu = (e) => {
