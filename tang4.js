@@ -1,7 +1,13 @@
 let tenfolder = localStorage.getItem("tenfolder");
 let users = JSON.parse(localStorage.getItem("users"));
 let DaDangNhap = localStorage.getItem("DaDangNhap");
-let root = users[DaDangNhap].drive.children[tenfolder];
+if (!tenfolder || !users || !users[DaDangNhap] || !users[DaDangNhap].drive.children[tenfolder]) {
+    alert("Folder không tồn tại hoặc đã bị xóa. Quay về trang trước.");
+    window.location.href = "trang3.html"; // trang chứa danh sách folder
+} else {
+    var root = users[DaDangNhap].drive.children[tenfolder];
+}
+console.log("root =", root);
 document.getElementsByClassName("con3")[0].onclick = function(){
     document.querySelector(".con1").style.display="flex";
 }
@@ -9,6 +15,8 @@ document.getElementById("TAT").onclick = function(){
     document.querySelector(".con1").style.display="none";
 }
 function taofile(){
+    console.log(document.getElementById("TenFilemoi"));
+
     let name= document.getElementById("TenFilemoi").value.trim();
     if(!name){
         alert("Hãy tạo file!");
