@@ -79,6 +79,7 @@
     position:fixed;
     height:88%;
     width:15%;
+    display:inline;
 }
 ol{
     margin-top: 4%;
@@ -87,7 +88,7 @@ ol li{
     padding-left: 4%;
     height: 30px;
     border-radius: 10px;
-    width: 120px;
+    width: 80%;
     padding-top:5%;
     color:rgb(20, 57, 106);
     background-color: rgb(231, 244, 248);
@@ -103,6 +104,21 @@ li:hover{
 }
 li:hover>ol{
     display: block;
+}
+.khungfile{
+    position:relative;
+    width:85%;
+    height:80%;
+    border:1px solid gray;
+    border-radius:5px;
+    left:29%;
+    top:90%;
+    display:flex;
+    z-index:6;
+}
+.khungfile div{
+    width:30%;
+    height:100%;
 }
 .taofile{
     display:flex;
