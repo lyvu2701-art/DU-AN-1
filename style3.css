@@ -22,6 +22,7 @@
     border-radius: 20px;
     margin-left: 11%;
     margin-top: 1%;
+    position:relative;
 }
 .quanLiFile input{
     width: 95%;
@@ -45,6 +46,25 @@
     width:7%;
     height:56%;
     cursor:pointer;
+    position:relative;
+}
+.xuattrang{
+    width:5%;
+    height:3%;
+    z-index:1;
+    margin-top: 6%;
+    margin-left:93%;
+    background-color: rgb(204, 231, 240);
+    color:rgb(20, 57, 106);
+    position:fixed;
+    cursor:pointer;
+    border:1px solid rgb(224, 224, 224);
+    border-radius: 12px;
+    padding:4px;
+    display:none;
+}
+.xuattrang:hover{
+    background-color: lightblue;
 }
 .quanLiFile h2{
     margin-top:2%;

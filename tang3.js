@@ -94,3 +94,12 @@ function goStats(){
     window.location.href = "LichSu.html";
 }
 HienThiFolder(root, document.getElementById("fileTree"));
+function dangxuat(){
+    document.querySelector(".xuattrang").style.display="block";
+}
+function bienmatdx(){
+    document.querySelector(".xuattrang").style.display="none";
+}
+function xuattrang(){
+    window.location.href="trang1.html";
+}

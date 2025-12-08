@@ -14,8 +14,9 @@
                 <input type="text" name="file" placeholder="  &#9755; tìm kiếm...">
                 <button type="button" onclick=""><img class="logotimkiem" src="logoTimKiem.png" width="30px" height="30px" alt="logo tìm kiếm"></button>
             </div>
-            <img class="avatar"  src="avatar.png" alt="ảnh đại diện" onclick="">
+            <img class="avatar"  src="avatar.png" alt="ảnh đại diện" onclick="dangxuat()" ondblclick="bienmatdx()">
         </div>
+        <div class="xuattrang" onclick="xuattrang()"> Đăng xuất</div>
         <div class="khungdoc">
          <ol style="list-style-type: none;">
             <li id="TaoFile">Tạo file mới</li>
@@ -35,7 +36,6 @@
         <div class="taofile">
             <button type="button" id="tat">X</button>
             <input type="text" id="tenFolderMoi">
-            
             <button type="button" onclick="taoFolder()">Lưu</button>
         </div>
     </div>
