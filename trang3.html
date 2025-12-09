@@ -7,36 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="nentrang"> -->
+    <div class="nentrang">
         <div class="quanLiFile">
             <h2>QUẢN LÍ FILE</h2>
             <div>
-                <input type="text" name="file" placeholder="  &#9755; tìm kiếm...">
+                <input type="search" name="file" placeholder="  &#9755; tìm kiếm...">
                 <button type="button" onclick=""><img class="logotimkiem" src="logoTimKiem.png" width="30px" height="30px" alt="logo tìm kiếm"></button>
             </div>
             <img class="avatar"  src="avatar.png" alt="ảnh đại diện" onclick="dangxuat()" ondblclick="bienmatdx()">
         </div>
         <div class="xuattrang" onclick="xuattrang()"> Đăng xuất</div>
+        <div class="content">
+            <div>1jhkdfhvhlw</div>
+            <div>fjkenwhlrfqe2</div>
+            <div>3krfw;ekn</div>
+            <div>4ewjkvbjlewhf</div>
+        </div>
+        <div class="khungthongke">hehe</div>
         <div class="khungdoc">
          <ol style="list-style-type: none;">
-            <li id="TaoFile"> <img src="iconfolder.png" alt="icon" width="12%"> Tạo file mới</li>
+            <li id="TaoFile"> <img src="iconfolder.png" alt="icon" width="11%"> Tạo file mới</li>
             <!--<li>Xóa file</li>
             <li>Đổi tên file</li>-->
-            <li><img src="icondongho.png" alt="icon" width="12%"> Lịch sử thao tác
+            <li><img src="icondongho.png" alt="icon" width="11%"> Lịch sử thao tác
                 <ol style="list-style-type: none;" onclick="goStats()">
-                    <li style="margin-left:5%;margin-top: -2%;"> <img src="iconfile.png" alt="icon" width="15%"> File đã tạo</li>
+                    <li style="margin-left:5%;margin-top: -1.1%;"> <img src="iconfile.png" alt="icon" width="15%"> File đã tạo</li>
                     <li style="margin-left:5%"> <img src="iconfile.png" alt="icon" width="15%"> File đã Xóa</li>
                     <li style="margin-left:5%"> <img src="iconfile.png" alt="icon" width="15%"> File đã đổi tên</li>
                 </ol>
             </li>
          </ol>
-        </div>
-        <div class="Khungfile">
-            <div>1jhkdfhvhlw</div>
-            <div>fjkenwhlrfqe2</div>
-            <div>3krfw;ekn</div>
-            <div>4ewjkvbjlewhf</div>
-            <div class="khungthongke">hehe</div>
         </div>
         <div id="fileTree"></div>
         <div class="taofile">
@@ -44,7 +44,7 @@
             <input type="text" id="tenFolderMoi">
             <button type="button" onclick="taoFolder()">Lưu</button>
         </div>
-    <!-- </div> -->
+    </div>
       <script src="tang3.js"></script> 
 </body>
 </html>
