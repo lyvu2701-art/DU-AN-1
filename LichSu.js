@@ -26,7 +26,7 @@ function HienThiLichSu(history, contain){
         contain.append(item);
     }
 }
-HienThiLichSu(user.history, document.getElementById("lichsu"));
+HienThiLichSu(user.history, document.getElementByClassName(""));
 function dangxuat(){
     document.querySelector(".xuattrang").style.display="block";
 }
