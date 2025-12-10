@@ -42,7 +42,9 @@ function CapNhat(){
 }
 function HienThiFolder(Folder, contain){
     contain.innerHTML = "";
+    let dem = 0;
     for(let name in Folder.children){
+        dem += 1;
         let item = document.createElement("div");
         item.style.border = "1px solid";
         item.style.display = "flex";
@@ -89,6 +91,7 @@ function HienThiFolder(Folder, contain){
         }*/
         
     }
+    Folder.demfolder = dem;
 }
 function goStats(){
     window.location.href = "LichSu.html";
