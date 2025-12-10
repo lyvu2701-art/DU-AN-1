@@ -142,8 +142,8 @@ li:hover>ol{
 }
 .taofile{
     position:relative;
-    width:43%;
-    height:250px;
+    width:40%;
+    height:220px;
     border:1px solid rgb(132, 133, 134);
     border-radius: 10px;
     background-color: #f2f2f5;
@@ -183,26 +183,46 @@ li:hover>ol{
     top:4%;
 }
 #fileTree {
-    border:1px solid rgb(191, 194, 197);
-    margin-top: 0%;       
-    margin-left: 3%;      
-    padding: 20px;
+    border:1px solid rgb(191, 194, 197);     
+    margin-left: 2.5%;      
+    padding: 10px;
     height: 1980px;          
     background-color: #f5f6fa;
-    width:90%;
     display:flex;
-    border-radius: 2px;
     flex-wrap: wrap;
+    width:100%;
+    margin-top: 15px;
 }
-#fileTree div { 
-    /* width:43%;
-    height:250px;
-    border:1px solid rgb(132, 133, 134);
+#fileTree div{ 
+    width:45%;
+    height:20px;
+    border:1px solid gray;
     border-radius: 10px;
     background-color: #f2f2f5;
-    box-shadow:5px 10px #c9c9cd;
-    padding:20px;
-    margin-left:20px;
-    margin-top:0px; */
+    margin-top:6%;
+    margin-left: 4%;
     cursor: pointer;
+    padding-left: 10px;
+    box-shadow:5px 10px #c9c9cd;
+}
+#fileTree button{
+    height:20px;
+    border:1px solid gray;
+    border-radius: 10px;
+    margin-top:6%;
+}
+#doiTen{
+    margin-left: 10px;
+    padding:0px 5px;
+    width:auto;
+}
+#doiTen:hover{
+    background: #c9c9cd;
+}
+#xoa{ 
+    padding:0px 5px;
+    width:auto;
+}
+#xoa:hover{
+    background: #c9c9cd;
 }
