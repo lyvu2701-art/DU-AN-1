@@ -79,7 +79,7 @@ function HienThiFolder(Folder, contain){
 
         // click để mở file
         if (Folder.children[name].type === "folder"){
-            let tenfolder = name;
+            //let tenfolder = name;
             b.onclick = () => {
                 localStorage.setItem("tenfolder", name);
                 window.location.href = "trang4.html";

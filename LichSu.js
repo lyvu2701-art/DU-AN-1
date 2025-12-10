@@ -1,12 +1,14 @@
 let tenfolder = localStorage.getItem("tenfolder");
 let DaDangNhap = localStorage.getItem("DaDangNhap");
-if(!DaDangNhap || !user || !user("DaDangNhap")){
+let users = JSON.parse(localStorage.getItem("users"));
+let user = users[DaDangNhap];
+if(!DaDangNhap || !user){
     alert("Vui lòng đăng nhập để xem lịch sử hoạt động");
     window.location.href = "trang1.html";
 }
-let users = JSON.parse(localStorage.getItem("users"));
-let user = users[DaDangNhap];
-let root1 = users[DaDangNhap].drive;
+else{
+    var root1 = users[DaDangNhap].drive;
+}
 function hienThi(){
     let demfile = 0;
     let demfolder = root1.demfolder;
@@ -26,7 +28,8 @@ function HienThiLichSu(history, contain){
         contain.append(item);
     }
 }
-HienThiLichSu(user.history, document.getElementByClassName(""));
+HienThiLichSu(user.history, document.getElementById("lichsu"));
+hienThi();
 function dangxuat(){
     document.querySelector(".xuattrang").style.display="block";
 }
