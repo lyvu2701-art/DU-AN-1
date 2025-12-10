@@ -96,10 +96,10 @@ function HienThiFolder(Folder, contain){
     }
     Folder.demfolder = dem;
 }
+HienThiFolder(root, document.getElementById("fileTree"));
 function goStats(){
     window.location.href = "LichSu.html";
 }
-HienThiFolder(root, document.getElementById("fileTree"));
 function dangxuat(){
     document.querySelector(".xuattrang").style.display="block";
 }
@@ -112,3 +112,4 @@ function xuattrang(){
 function trangchu(){
     window.location.href="trang3.html";
 }
+//tạo file

@@ -26,4 +26,16 @@ function HienThiLichSu(history, contain){
         contain.append(item);
     }
 }
-HienThiLichSu(user.history, document.getElementById(""))
+HienThiLichSu(user.history, document.getElementById("lichsu"));
+function dangxuat(){
+    document.querySelector(".xuattrang").style.display="block";
+}
+function bienmatdx(){
+    document.querySelector(".xuattrang").style.display="none";
+}
+function xuattrang(){
+    window.location.href="trang1.html";
+}
+function trangchu(){
+    window.location.href="trang3.html";
+}
