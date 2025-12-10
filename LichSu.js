@@ -26,4 +26,4 @@ function HienThiLichSu(history, contain){
         contain.append(item);
     }
 }
-HienThiLichSu(user.history, document.getElementById(""))
+HienThiLichSu(user.history, document.getElementsByClassName(""))
