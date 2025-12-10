@@ -10,12 +10,26 @@ else{
     var root1 = users[DaDangNhap].drive;
 }
 function hienThi(){
+    let demfolder = 0;
     let demfile = 0;
-    let demfolder = root1.demfolder;
-    document.getElementById("Sofolder").textContent += `${demfolder}`;
-    for(let name in root1.children){
-        demfile += root1.children[name].demfile;
+
+    // Duyệt tất cả folder trong root1
+    for (let folderName in root1.children) {
+        let folder = root1.children[folderName];
+
+        if (folder.type === "folder") {
+            demfolder += 1;
+
+            // Đếm file trong folder
+            for (let fileName in folder.children) {
+                let file = folder.children[fileName];
+                if (file.type === "file") {
+                    demfile += 1;
+                }
+            }
+        }
     }
+    document.getElementById("Sofolder").textContent += `${demfolder}`;
     document.getElementById("Sofile").textContent += `${demfile}`;  
 }
 function HienThiLichSu(history, contain){

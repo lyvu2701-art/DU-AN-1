@@ -53,9 +53,7 @@ function CapNhatfile(){
 }
 function HienThiFile(Folder, contain){
     contain.innerHTML = "";
-    let dem = 0;
     for(let name in Folder.children){
-        dem += 1;
         let item = document.createElement("div");
         item.style.border = "1px solid";
         item.style.display = "flex";
@@ -93,7 +91,6 @@ function HienThiFile(Folder, contain){
         }
         
     }
-    Folder.demfile = dem;
     
 }
 HienThiFile(root, document.getElementById("fileTree1"));
