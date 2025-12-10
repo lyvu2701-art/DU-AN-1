@@ -142,13 +142,12 @@ li:hover>ol{
 }
 .taofile{
     position:relative;
-    width:40%;
-    height:220px;
-    border:1px solid rgb(132, 133, 134);
+    width:30%;
+    height:60px;
+    border:1px solid rgb(205, 206, 206);
     border-radius: 10px;
     background-color: #f2f2f5;
     box-shadow:5px 10px #c9c9cd;
-    padding:20px;
     margin-left:20px;
     margin-top:12px;
     display:none;
@@ -160,17 +159,22 @@ li:hover>ol{
     height: 30px;
     color:rgb(20, 57, 106);
     border-radius: 20px;
-    top:4%;
-    left:4%;
+    top:30%;
+    left:6%;
+    padding-left: 10px;
 }
 .taofile button{
     position:absolute;
-    width: 10%;
-    color:rgb(20, 57, 106);
+    width: 12%;
     border: 1px solid gray;
+    color:rgb(20, 57, 106);
     border-radius: 5px;
-    right:4%;
-    bottom:4%;
+    right:10%;
+    top:38%;
+    padding:2px;
+}
+.taofile button:hover{
+    background-color: #c9c9cd;
 }
 #tat{
     position:absolute;
@@ -179,22 +183,34 @@ li:hover>ol{
     color:rgb(20, 57, 106);
     border: 1px solid gray;
     border-radius: 5px;
-    right:4%;
-    top:4%;
+    left:1%;
+    top:1%;
+    border-style: none;
 }
 #fileTree {
     border:1px solid rgb(191, 194, 197);     
-    margin-left: 2.5%;      
+    margin-left: 1%;      
     padding: 10px;
     height: 1980px;          
     background-color: #f5f6fa;
-    display:flex;
-    flex-wrap: wrap;
+    /* display:flex;
+    flex-wrap: wrap; */
     width:100%;
     margin-top: 15px;
 }
-#fileTree div{ 
-    width:45%;
+#khungfile{ 
+    width:43%;
+    height:50px;
+    border:1px solid gray;
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    cursor: pointer;
+    padding-left: 10px;
+    box-shadow:5px 10px #c9c9cd;
+    display:flex;
+}
+#tenfolder{
+    width:43%;
     height:20px;
     border:1px solid gray;
     border-radius: 10px;
@@ -203,7 +219,6 @@ li:hover>ol{
     margin-left: 4%;
     cursor: pointer;
     padding-left: 10px;
-    box-shadow:5px 10px #c9c9cd;
 }
 #fileTree button{
     height:20px;

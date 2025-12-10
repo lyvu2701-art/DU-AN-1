@@ -47,14 +47,11 @@ function HienThiFolder(Folder, contain){
     for(let name in Folder.children){
         dem += 1;
         let item = document.createElement("div");
-        item.style.display = "flex";
-        item.style.width="43%";
-        item.style.height="250px";
-        item.style.borderRadius="10px";
-        item.style.marginTop="0px";
-        let tenfolder=document.createElement("p");
-        tenfolder.textContent="Tên Folder:";
+        item.id="khungfile";
+        // let tenfolder=document.createElement("p");
+        // tenfolder.textContent="Tên Folder:";
         let b = document.createElement("div");
+        b.id="tenfolder";
         b.textContent = name + (Folder.children[name].type ==="folder"?"/":"");
         item.appendChild(b);
         let c = document.createElement("button");
