@@ -48,8 +48,10 @@ function HienThiFolder(Folder, contain){
         dem += 1;
         let item = document.createElement("div");
         item.id="khungfile";
-        // let tenfolder=document.createElement("p");
-        // tenfolder.textContent="Tên Folder:";
+        let logofolder=document.createElement("img");
+        logofolder.src="iconfolder.png";
+        logofolder.id="logofolder2";
+        item.append(logofolder);
         let b = document.createElement("div");
         b.id="tenfolder";
         b.textContent = name + (Folder.children[name].type ==="folder"?"/":"");

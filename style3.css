@@ -188,19 +188,17 @@ li:hover>ol{
     border-style: none;
 }
 #fileTree {
-    border:1px solid rgb(191, 194, 197);     
+    /* border:1px solid rgb(191, 194, 197);      */
     margin-left: 1%;      
     padding: 10px;
     height: 1980px;          
     background-color: #f5f6fa;
-    /* display:flex;
-    flex-wrap: wrap; */
     width:100%;
     margin-top: 15px;
 }
 #khungfile{ 
-    width:43%;
-    height:50px;
+    width:30%;
+    height:40px;
     border:1px solid gray;
     border-radius: 10px;
     background-color: #f2f2f5;
@@ -208,27 +206,27 @@ li:hover>ol{
     padding-left: 10px;
     box-shadow:5px 10px #c9c9cd;
     display:flex;
+    margin-top: 25px;
 }
 #tenfolder{
     width:43%;
     height:20px;
-    border:1px solid gray;
     border-radius: 10px;
     background-color: #f2f2f5;
-    margin-top:6%;
-    margin-left: 4%;
+    margin-top:3%;
+    margin-left: 0%;
     cursor: pointer;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 #fileTree button{
     height:20px;
     border:1px solid gray;
     border-radius: 10px;
-    margin-top:6%;
+    margin-top:3%;
 }
 #doiTen{
     margin-left: 10px;
-    padding:0px 5px;
+    padding:0px 3px;
     width:auto;
 }
 #doiTen:hover{
