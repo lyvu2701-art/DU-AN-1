@@ -44,7 +44,7 @@ function HienThiFolder(Folder, contain){
     contain.innerHTML = "";
     for(let name in Folder.children){
         let item = document.createElement("div");
-        item.id="khungfile";
+        item.id="khungfolder";
         let logofolder=document.createElement("img");
         logofolder.src="iconfolder.png";
         logofolder.id="logofolder2";
@@ -66,18 +66,20 @@ function HienThiFolder(Folder, contain){
         d.onclick = () => Xoa(Folder, name);
         item.appendChild(d);
         contain.appendChild(item);
-        item.style.cursor = "pointer";
-        // click để đổi tên
-        
+        //tạo file
+        let taofile=document.createElement("button");
+        taofile.id="taofilemoi";
+        taofile.textContent="Tạo file";
+        item.append(taofile);
+        // click để đổi tên    
         /*item.onclick = (e) => {
             e.stopPropagation(); // quan trọng
-            HienThiFolder(Folder.children[name], contain);
-}*/
+            HienThiFolder(Folder.children[name], contain);*/
 
         // click để mở file
         if (Folder.children[name].type === "folder"){
-            //let tenfolder = name;
-            b.onclick = () => {
+            let tenfolder = name;
+            taofile.onclick = () => {
                 localStorage.setItem("tenfolder", name);
                 window.location.href = "trang4.html";
             };/*{
@@ -89,9 +91,8 @@ function HienThiFolder(Folder, contain){
             e.preventDefault();
             Xoa(Folder, name);
         }*/
-        
     }
-}
+} 
 HienThiFolder(root, document.getElementById("fileTree"));
 function goStats(){
     window.location.href = "LichSu.html";
@@ -108,4 +109,3 @@ function xuattrang(){
 function trangchu(){
     window.location.href="trang3.html";
 }
-//tạo file

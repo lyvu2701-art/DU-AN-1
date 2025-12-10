@@ -55,23 +55,25 @@ function HienThiFile(Folder, contain){
     contain.innerHTML = "";
     for(let name in Folder.children){
         let item = document.createElement("div");
-        item.style.border = "1px solid";
-        item.style.display = "flex";
+        item.id="khungfile";
+        let logofile=document.createElement("img");
+        logofile.src="iconfile.png";
+        logofile.id="logofile2";
+        item.append(logofile);
         let b = document.createElement("div");
-        b.style.border = "1px solid";
-        b.style.width = "110px";
+        b.id="tenfile";
         b.textContent = name;
         item.appendChild(b);
         let c = document.createElement("button");
-        //c.id = "doiTen";
+        c.id = "doiTen";
         c.type = "button";
-        c.textContent = "doi ten";
+        c.textContent = "Đổi tên";
         c.onclick = () => SuaFlie(Folder, name);
         item.appendChild(c);
         let d = document.createElement("button");
-        //d.id = "xoa";
+        d.id = "xoa";
         d.type = "button";
-        d.textContent = "Xoa";
+        d.textContent = "Xoá";
         d.onclick = () => Xoafile(Folder, name);
         item.appendChild(d);
         contain.appendChild(item);
@@ -94,3 +96,15 @@ function HienThiFile(Folder, contain){
     
 }
 HienThiFile(root, document.getElementById("fileTree1"));
+function dangxuat(){
+    document.querySelector(".xuattrang").style.display="block";
+}
+function bienmatdx(){
+    document.querySelector(".xuattrang").style.display="none";
+}
+function xuattrang(){
+    window.location.href="trang1.html";
+}
+function trangchu(){
+    window.location.href="trang3.html";
+}

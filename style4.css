@@ -1,44 +1,337 @@
+/* *{
+    margin:0%;
+    padding:0%;
+} */
+/* .khungdoc{
+    background-color: rgb(231, 244, 248);
+    color:rgb(20, 57, 106);
+    position:fixed;
+    height:100%;
+    width:15%;
+}
 .khung{
-    position:relative;
-        width: 100%;
-        height: 100%;
+    width: 100%;
+    height: 100%;
+}
+.avatar{
+    height:100%;
+    cursor:pointer;
+    position:absolute;
+}
+.khungavatar{
+    width:80%;
+    height:40px;
+    border:1px solid rgb(212, 211, 211);
+    border-radius: 20px;
+    bottom: 5%;
+    left:10%;
+    position:absolute;
+    padding: 0px;
+}
+.xuattrang{
+    width:auto;
+    height:22px;
+    z-index:10000;
+    bottom:1%;
+    left:33%;
+    color:rgb(20, 57, 106);
+    position:absolute;
+    cursor:pointer;
+    border-radius: 12px;
+    padding:4px;
+}
+.xuattrang:hover{
+    color: rgb(85, 87, 87);
+}
+h2{
+    margin-top:10%;
+    margin-left:6%;
+    cursor:pointer;
+}
+ol{
+    margin-top: 5%;
+}
+ol li{
+    padding-left: 4.5%;
+    height: 30px;
+    border-radius: 10px;
+    width: 80%;
+    padding-top:3%;
+    color:rgb(20, 57, 106);
+    background-color: rgb(231, 244, 248);
+    cursor:pointer;
+}
+li>ol{
+    margin-top:5%;
+    margin-left:2.7%;
+    display: none;
+}
+li:hover{
+    background-color: lightblue;
+}
+li:hover>ol{
+    display: block;
+}
+.content{
+    border:1px solid rgb(191, 194, 197);
+    margin-top: 87.5px;       
+    margin-left: 15%;      
+    padding: 20px;
+    height: 2000px;          
+    background-color: #f5f6fa;
+    width:70%;
+    display:flex;
+    border-radius: 2px;
+    flex-wrap: wrap;
+}
+.khungthongke{
+    width:13%;
+    height:2000px;
+    top: 87.5px;       
+    left: 87.9%; 
+    position:fixed;
+    border:1px solid rgb(191, 194, 197);
+    border-radius: 2px;
+    background-color: #f5f6fa;
+    padding:20px;
+} */
+
+*{
+    margin:0px;
+    padding:0px;
+}
+.nentrang{
+    height: 100%;
+}
+.quanLiFile{
+    display: flex;
+    width: 100%;
+    height:87.5px;
+    color:rgb(20, 57, 106);
+    background-color: lightblue;
+    position:fixed;
+    align-items:center;
+    top:0px;
+    left:0px;
+    z-index:9999;
+}
+.quanLiFile>div{
+    display: flex;
+    width: 40%;
+    height: 40%;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-left: 11%;
+    margin-top:1.6%;
+}
+.quanLiFile input{
+    width: 95%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid white;
+}
+.quanLiFile button{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 1px solid white;
+    cursor:pointer;
+}
+.logotimkiem{
+    margin-top:1px;
+    border-radius: 10px;
+}
+.avatar{
+    margin-left:93%;
+    margin-top: 1%;
+    width:7%;
+    height:53%;
+    cursor:pointer;
+    position:absolute;
+}
+.xuattrang{
+    width:5%;
+    height:22px;
+    z-index:10000;
+    top:10%;
+    right:0.8%;
+    background-color: white;
+    color:rgb(20, 57, 106);
+    position:absolute;
+    cursor:pointer;
+    border:1px solid rgb(224, 224, 224);
+    border-radius: 12px;
+    padding:4px;
+    display:none;
+}
+.xuattrang:hover{
+    background-color:  rgb(231, 244, 248);
+}
+.quanLiFile h2{
+    margin-top:1.3%;
+    margin-left:1.5%;
+    cursor:pointer;
+}
+.khungdoc{
+    background-color: rgb(231, 244, 248);
+    color:rgb(20, 57, 106);
+    top:87.5px;
+    position:fixed;
+    height:100%;
+    width:15%;
+}
+ol{
+    margin-top: 5%;
+}
+ol li{
+    padding-left: 4.5%;
+    height: 30px;
+    border-radius: 10px;
+    width: 80%;
+    padding-top:3%;
+    color:rgb(20, 57, 106);
+    background-color: rgb(231, 244, 248);
+    cursor:pointer;
+}
+li>ol{
+    margin-top:5%;
+    margin-left:2.7%;
+    display: none;
+}
+li:hover{
+    background-color: lightblue;
+}
+li:hover>ol{
+    display: block;
+}
+.content{
+    border:1px solid rgb(191, 194, 197);
+    margin-top: 87.5px;       
+    margin-left: 15%;      
+    padding: 20px;
+    height: 2000px;          
+    background-color: #f5f6fa;
+    width:70%;
+    display:flex;
+    border-radius: 2px;
+    flex-wrap: wrap;
+}
+.khungthongke{
+    width:13%;
+    height:2000px;
+    top: 87.5px;       
+    left: 87.9%; 
+    position:fixed;
+    border:1px solid rgb(191, 194, 197);
+    border-radius: 2px;
+    background-color: #f5f6fa;
+    padding:20px;
 }
 .con1{
-    position:absolute;
-    top: 10px;
-    left: 10px;
-    width: 300px;
-    height: 100px;
-    display: flex;
-    display: none;
-    background-color: rgb(64, 169, 159);
-    flex-direction: column;
+    position:relative;
+    width:30%;
+    height:60px;
+    border:1px solid rgb(205, 206, 206);
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    box-shadow:5px 10px #c9c9cd;
+    margin-left:20px;
+    margin-top:12px;
+    display:none;
 }
 .con1 button{
-    width: 30px;
-    height: 30px;
-    margin-left: 80%;
+    position:absolute;
+    width: 12%;
+    border: 1px solid gray;
+    color:rgb(20, 57, 106);
+    border-radius: 5px;
+    right:10%;
+    top:38%;
+    padding:2px;
+}
+#TAT{
+    position:absolute;
+    width: 5%;
+    height:20px;
+    color:rgb(20, 57, 106);
+    border: 1px solid gray;
+    border-radius: 5px;
+    left:1%;
+    top:1%;
+    border-style: none;
 }
 .con1 input{
-    width: 80%;
+    position:absolute;
+    border: 1px solid gray;
+    width: 65%;
     height: 30px;
-    margin: auto;
+    color:rgb(20, 57, 106);
+    border-radius: 20px;
+    top:30%;
+    left:6%;
+    padding-left: 10px;
+}
+.con1 button:hover{
+    background-color: #c9c9cd;
 }
 .con3{
-    position:absolute;
-    top: 150px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+    padding-left: 4.5%;
+    height: 30px;
+    border-radius: 10px;
+    width: 80%;
+    padding-top:3%;
+    color:rgb(20, 57, 106);
+    background-color: rgb(231, 244, 248);
+    cursor:pointer;
 }
 #fileTree1 {
-    position: absolute;
-    z-index: 20;
-    top: 80px;
-    right:20px;
+    margin-left: 1%;      
+    padding: 10px;
+    height: 1980px;          
+    background-color: #f5f6fa;
+    width:100%;
+    margin-top: 15px;
 }
-#fileTree1 div {
-    position: relative; 
+#khungfile{
+    width:35%;
+    height:35px;
+    border:1px solid gray;
+    border-radius: 10px;
+    background-color: #f2f2f5;
     cursor: pointer;
+    padding-left: 10px;
+    box-shadow:5px 10px #c9c9cd;
+    display:flex;
+    margin-top: 25px;
+}
+#tenfile{
+    width:43%;
+    height:20px;
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    margin-top:3%;
+    margin-left: 0%;
+    padding-left: 5px;
+}
+#fileTree1 button{
+    height:20px;
+    border:1px solid gray;
+    border-radius: 10px;
+    margin-top:3%;
+}
+#doiTen{
+    margin-left: 10px;
+    padding:0px 3px;
+    width:auto;
+    cursor:pointer;
+}
+#doiTen:hover{
+    background: #c9c9cd;
+}
+#xoa{ 
+    padding:0px 5px;
+    width:auto;
+    cursor:pointer;
+}
+#xoa:hover{
+    background: #c9c9cd;
 }

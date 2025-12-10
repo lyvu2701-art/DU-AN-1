@@ -21,7 +21,7 @@
             <div class="taofile" >
                 <button type="button" id="tat">X</button>
                 <input type="text" id="tenFolderMoi" placeholder="Nhập tên folder...">
-                <button type="button" onclick="taoFolder()">Lưu</button>
+                <button type="button" id="luu" onclick="taoFolder()">Lưu</button>
             </div>
             <div id="fileTree"></div>
         </div>
@@ -33,17 +33,9 @@
             <p>Số file đã xoá:</p>
             <p>Số file đã đổi tên:</p>
         </div>
-        <!-- <div id="fileTree1"></div>
-        <div class="con1">
-            <button type="button" id="TAT">Tắt</button>
-            <input type="text" id="TenFilemoi" >
-            <button type="button" onclick="taofile()">Lưu</button>
-        </div>
-        <div class="con3"></div> -->
         <div class="khungdoc">
          <ol style="list-style-type: none;">
             <li id="TaoFile"> <img src="iconfolder.png" alt="icon" width="11%"> Tạo folder</li>
-            <li ><img src="iconfile.png" alt="icon" width="13%" style="margin-top:0px;"><span style="margin-bottom: 5px;">Tạo file </span></li>
             <li><img src="icondongho.png" alt="icon" width="11%" onclick="LichSu.html"> Lịch sử thao tác
                 <ol style="list-style-type: none;" onclick="goStats()">
                     <li style="margin-left:5%;margin-top: -1.1%;"> <img src="iconfile.png" alt="icon" width="15%"> File đã tạo</li>
