@@ -1,10 +1,10 @@
 let tenfolder = localStorage.getItem("tenfolder");
+let users = JSON.parse(localStorage.getItem("users"));
 let DaDangNhap = localStorage.getItem("DaDangNhap");
 if(!DaDangNhap || !user || !user("DaDangNhap")){
     alert("Vui lòng đăng nhập để xem lịch sử hoạt động");
     window.location.href = "trang1.html";
 }
-let users = JSON.parse(localStorage.getItem("users"));
 let user = users[DaDangNhap];
 let root1 = users[DaDangNhap].drive;
 function hienThi(){
