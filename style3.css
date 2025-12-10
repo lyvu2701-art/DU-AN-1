@@ -3,7 +3,6 @@
     padding:0px;
 }
 .nentrang{
-    /* position: relative; */
     height: 100%;
 }
 .quanLiFile{
@@ -118,17 +117,6 @@ li:hover>ol{
     border-radius: 2px;
     flex-wrap: wrap;
 }
-/* .content div{
-    width:43%;
-    height:250px;
-    border:1px solid rgb(132, 133, 134);
-    border-radius: 10px;
-    background-color: #f2f2f5;
-    box-shadow:5px 10px #c9c9cd;
-    padding:20px;
-    margin-left:20px;
-    margin-top:12px;
-} */
 .khungthongke{
     width:13%;
     height:2000px;
@@ -188,7 +176,6 @@ li:hover>ol{
     border-style: none;
 }
 #fileTree {
-    /* border:1px solid rgb(191, 194, 197);      */
     margin-left: 1%;      
     padding: 10px;
     height: 1980px;          
