@@ -3,7 +3,6 @@
     padding:0px;
 }
 .nentrang{
-    /* position: relative; */
     height: 100%;
 }
 .quanLiFile{
@@ -118,17 +117,7 @@ li:hover>ol{
     border-radius: 2px;
     flex-wrap: wrap;
 }
-/* .content div{
-    width:43%;
-    height:250px;
-    border:1px solid rgb(132, 133, 134);
-    border-radius: 10px;
-    background-color: #f2f2f5;
-    box-shadow:5px 10px #c9c9cd;
-    padding:20px;
-    margin-left:20px;
-    margin-top:12px;
-} */
+
 .khungthongke{
     width:13%;
     height:2000px;
@@ -139,103 +128,4 @@ li:hover>ol{
     border-radius: 2px;
     background-color: #f5f6fa;
     padding:20px;
-}
-.taofile{
-    position:relative;
-    width:30%;
-    height:60px;
-    border:1px solid rgb(205, 206, 206);
-    border-radius: 10px;
-    background-color: #f2f2f5;
-    box-shadow:5px 10px #c9c9cd;
-    margin-left:20px;
-    margin-top:12px;
-    display:none;
-}
-.taofile input{
-    position:absolute;
-    border: 1px solid gray;
-    width: 65%;
-    height: 30px;
-    color:rgb(20, 57, 106);
-    border-radius: 20px;
-    top:30%;
-    left:6%;
-    padding-left: 10px;
-}
-.taofile button{
-    position:absolute;
-    width: 12%;
-    border: 1px solid gray;
-    color:rgb(20, 57, 106);
-    border-radius: 5px;
-    right:10%;
-    top:38%;
-    padding:2px;
-}
-.taofile button:hover{
-    background-color: #c9c9cd;
-}
-#tat{
-    position:absolute;
-    width: 5%;
-    height:20px;
-    color:rgb(20, 57, 106);
-    border: 1px solid gray;
-    border-radius: 5px;
-    left:1%;
-    top:1%;
-    border-style: none;
-}
-#fileTree {
-    /* border:1px solid rgb(191, 194, 197);      */
-    margin-left: 1%;      
-    padding: 10px;
-    height: 1980px;          
-    background-color: #f5f6fa;
-    width:100%;
-    margin-top: 15px;
-}
-#khungfile{ 
-    width:30%;
-    height:35px;
-    border:1px solid gray;
-    border-radius: 10px;
-    background-color: #f2f2f5;
-    cursor: pointer;
-    padding-left: 10px;
-    box-shadow:5px 10px #c9c9cd;
-    display:flex;
-    margin-top: 25px;
-}
-#tenfolder{
-    width:43%;
-    height:20px;
-    border-radius: 10px;
-    background-color: #f2f2f5;
-    margin-top:3%;
-    margin-left: 0%;
-    cursor: pointer;
-    padding-left: 5px;
-}
-#fileTree button{
-    height:20px;
-    border:1px solid gray;
-    border-radius: 10px;
-    margin-top:3%;
-}
-#doiTen{
-    margin-left: 10px;
-    padding:0px 3px;
-    width:auto;
-}
-#doiTen:hover{
-    background: #c9c9cd;
-}
-#xoa{ 
-    padding:0px 5px;
-    width:auto;
-}
-#xoa:hover{
-    background: #c9c9cd;
 }

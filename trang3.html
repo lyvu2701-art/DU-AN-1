@@ -9,7 +9,7 @@
 <body>
     <div class="nentrang">
         <div class="quanLiFile">
-            <h2>QUẢN LÍ FILE</h2>
+            <h2 onclick="trangchu()">QUẢN LÍ FILE</h2>
             <div>
                 <input type="search" name="file" placeholder="  &#9755; tìm kiếm...">
                 <button type="button" onclick=""><img class="logotimkiem" src="logoTimKiem.png" width="30px" height="30px" alt="logo tìm kiếm"></button>
@@ -20,10 +20,12 @@
         <div class="content">
             <div class="taofile" >
                 <button type="button" id="tat">X</button>
-                <input type="text" id="tenFolderMoi">
+                <input type="text" id="tenFolderMoi" placeholder="Nhập tên folder...">
                 <button type="button" onclick="taoFolder()">Lưu</button>
             </div>
-            <div id="fileTree"></div>
+            <div id="fileTree">
+                <img src="iconfolder.png" alt="icon" width="11%">
+            </div>
         </div>
         <div class="khungthongke">
             <h3>Thống kê:</h3>
@@ -36,7 +38,7 @@
         <div id="fileTree1"></div>
         <div class="con1">
             <button type="button" id="TAT">Tắt</button>
-            <input type="text" id="TenFilemoi">
+            <input type="text" id="TenFilemoi" >
             <button type="button" onclick="taofile()">Lưu</button>
         </div>
         <div class="con3"></div>
