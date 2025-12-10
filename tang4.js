@@ -67,13 +67,13 @@ function HienThiFile(Folder, contain){
         let c = document.createElement("button");
         c.id = "doiTen";
         c.type = "button";
-        c.textContent = "doi ten";
+        c.textContent = "Đổi tên";
         c.onclick = () => SuaFlie(Folder, name);
         item.appendChild(c);
         let d = document.createElement("button");
         d.id = "xoa";
         d.type = "button";
-        d.textContent = "Xoa";
+        d.textContent = "Xoá";
         d.onclick = () => Xoafile(Folder, name);
         item.appendChild(d);
         contain.appendChild(item);
