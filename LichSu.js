@@ -1,19 +1,35 @@
 let tenfolder = localStorage.getItem("tenfolder");
 let DaDangNhap = localStorage.getItem("DaDangNhap");
-if(!DaDangNhap || !user || !user("DaDangNhap")){
+let users = JSON.parse(localStorage.getItem("users"));
+let user = users[DaDangNhap];
+if(!DaDangNhap || !user){
     alert("Vui lòng đăng nhập để xem lịch sử hoạt động");
     window.location.href = "trang1.html";
 }
-let users = JSON.parse(localStorage.getItem("users"));
-let user = users[DaDangNhap];
-let root1 = users[DaDangNhap].drive;
+else{
+    var root1 = users[DaDangNhap].drive;
+}
 function hienThi(){
+    let demfolder = 0;
     let demfile = 0;
-    let demfolder = root1.demfolder;
-    document.getElementById("Sofolder").textContent += `${demfolder}`;
-    for(let name in root1.children){
-        demfile += root1.children[name].demfile;
+
+    // Duyệt tất cả folder trong root1
+    for (let folderName in root1.children) {
+        let folder = root1.children[folderName];
+
+        if (folder.type === "folder") {
+            demfolder += 1;
+
+            // Đếm file trong folder
+            for (let fileName in folder.children) {
+                let file = folder.children[fileName];
+                if (file.type === "file") {
+                    demfile += 1;
+                }
+            }
+        }
     }
+    document.getElementById("Sofolder").textContent += `${demfolder}`;
     document.getElementById("Sofile").textContent += `${demfile}`;  
 }
 function HienThiLichSu(history, contain){
@@ -26,7 +42,8 @@ function HienThiLichSu(history, contain){
         contain.append(item);
     }
 }
-HienThiLichSu(user.history, document.getElementByClassName(""));
+HienThiLichSu(user.history, document.getElementById("lichsu"));
+hienThi();
 function dangxuat(){
     document.querySelector(".xuattrang").style.display="block";
 }

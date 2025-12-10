@@ -13,7 +13,7 @@ function dangKy(){
     }
     users[username] = {
         password: password,
-        drive: { type: "folder", children: {}, demfolder: 0},
+        drive: { type: "folder", children: {}},
         history: []
     }
     localStorage.setItem("users", JSON.stringify(users));

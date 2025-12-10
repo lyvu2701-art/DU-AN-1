@@ -15,7 +15,6 @@ function taoFolder(){
     root.children[name] = {
         type: "folder",
         children: {},
-        demfile: 0
     }
     users[DaDangNhap].history.push(`Tạo thư mục '${name}'`);
     CapNhat();
@@ -43,9 +42,7 @@ function CapNhat(){
 }
 function HienThiFolder(Folder, contain){
     contain.innerHTML = "";
-    let dem = 0;
     for(let name in Folder.children){
-        dem += 1;
         let item = document.createElement("div");
         item.id="khungfolder";
         let logofolder=document.createElement("img");
@@ -83,8 +80,13 @@ function HienThiFolder(Folder, contain){
 
         // click để mở file
         if (Folder.children[name].type === "folder"){
+<<<<<<< HEAD
             let tenfolder = name;
             taofile.onclick = () => {
+=======
+            //let tenfolder = name;
+            b.onclick = () => {
+>>>>>>> 92a27e7b4f75817f5d667e629f8c52b7fd2d89cb
                 localStorage.setItem("tenfolder", name);
                 window.location.href = "trang4.html";
             };/*{
@@ -98,7 +100,6 @@ function HienThiFolder(Folder, contain){
         }*/
         
     }
-    Folder.demfolder = dem;
 }
 HienThiFolder(root, document.getElementById("fileTree"));
 function goStats(){
