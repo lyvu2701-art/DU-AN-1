@@ -109,6 +109,9 @@ function bienmatdx(){
 function xuattrang(){
     window.location.href="trang1.html";
 }
+function trangchu(){
+    window.location.href="trang3.html";
+}
 //file
 // let tenfolder = localStorage.getItem("tenfolder");
 // let users = JSON.parse(localStorage.getItem("users"));
