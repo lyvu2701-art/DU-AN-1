@@ -183,8 +183,8 @@ li:hover>ol{
     width:100%;
     margin-top: 15px;
 }
-#khungfile{ 
-    width:30%;
+#khungfolder{ 
+    width:35%;
     height:35px;
     border:1px solid gray;
     border-radius: 10px;
@@ -202,7 +202,6 @@ li:hover>ol{
     background-color: #f2f2f5;
     margin-top:3%;
     margin-left: 0%;
-    cursor: pointer;
     padding-left: 5px;
 }
 #fileTree button{
@@ -215,6 +214,7 @@ li:hover>ol{
     margin-left: 10px;
     padding:0px 3px;
     width:auto;
+    cursor:pointer;
 }
 #doiTen:hover{
     background: #c9c9cd;
@@ -222,7 +222,16 @@ li:hover>ol{
 #xoa{ 
     padding:0px 5px;
     width:auto;
+    cursor:pointer;
 }
 #xoa:hover{
+    background: #c9c9cd;
+}
+#taofilemoi{
+    padding:0px 3px;
+    width:auto;
+    cursor:pointer;
+}
+#taofilemoi:hover{
     background: #c9c9cd;
 }

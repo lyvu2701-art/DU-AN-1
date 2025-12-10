@@ -47,7 +47,7 @@ function HienThiFolder(Folder, contain){
     for(let name in Folder.children){
         dem += 1;
         let item = document.createElement("div");
-        item.id="khungfile";
+        item.id="khungfolder";
         let logofolder=document.createElement("img");
         logofolder.src="iconfolder.png";
         logofolder.id="logofolder2";
@@ -69,7 +69,11 @@ function HienThiFolder(Folder, contain){
         d.onclick = () => Xoa(Folder, name);
         item.appendChild(d);
         contain.appendChild(item);
-        item.style.cursor = "pointer";
+        //tạo file
+        let taofile=document.createElement("button");
+        taofile.id="taofilemoi";
+        taofile.textContent="Tạo file";
+        item.append(taofile);
         // click để đổi tên
         
         /*item.onclick = (e) => {
@@ -80,7 +84,7 @@ function HienThiFolder(Folder, contain){
         // click để mở file
         if (Folder.children[name].type === "folder"){
             let tenfolder = name;
-            b.onclick = () => {
+            taofile.onclick = () => {
                 localStorage.setItem("tenfolder", name);
                 window.location.href = "trang4.html";
             };/*{
@@ -112,4 +116,3 @@ function xuattrang(){
 function trangchu(){
     window.location.href="trang3.html";
 }
-//tạo file
