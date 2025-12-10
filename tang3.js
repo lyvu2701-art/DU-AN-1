@@ -14,7 +14,8 @@ function taoFolder(){
     }
     root.children[name] = {
         type: "folder",
-        children: {}
+        children: {},
+        demfile: 0
     }
     users[DaDangNhap].history.push(`Tạo thư mục '${name}'`);
     CapNhat();
