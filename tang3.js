@@ -75,18 +75,15 @@ function HienThiFolder(Folder, contain){
         
         /*item.onclick = (e) => {
             e.stopPropagation(); // quan trọng
-            HienThiFolder(Folder.children[name], contain);
-}*/
+            HienThiFolder(Folder.children[name], contain);*/
+}
 
         // click để mở file
         if (Folder.children[name].type === "folder"){
-<<<<<<< HEAD
             let tenfolder = name;
             taofile.onclick = () => {
-=======
             //let tenfolder = name;
             b.onclick = () => {
->>>>>>> 92a27e7b4f75817f5d667e629f8c52b7fd2d89cb
                 localStorage.setItem("tenfolder", name);
                 window.location.href = "trang4.html";
             };/*{
