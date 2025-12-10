@@ -18,17 +18,24 @@
         </div>
         <div class="xuattrang" onclick="xuattrang()"> Đăng xuất</div>
         <div class="content">
-            <div>1jhkdfhvhlw</div>
-            <div>fjkenwhlrfqe2</div>
-            <div>3krfw;ekn</div>
-            <div>4ewjkvbjlewhf</div>
+            <div class="taofile" >
+                <button type="button" id="tat">X</button>
+                <input type="text" id="tenFolderMoi">
+                <button type="button" onclick="taoFolder()">Lưu</button>
+            </div>
+            <div id="fileTree"></div>
         </div>
-        <div class="khungthongke">hehe</div>
+        <div class="khungthongke">
+            <h3>Thống kê:</h3>
+            <p>&nbsp;</p>
+            <p>Số folder đã tạo:</p>
+            <p>Số file đã tạo:</p>
+            <p>Số file đã xoá:</p>
+            <p>Số file đã đổi tên:</p>
+        </div>
         <div class="khungdoc">
          <ol style="list-style-type: none;">
             <li id="TaoFile"> <img src="iconfolder.png" alt="icon" width="11%"> Tạo file mới</li>
-            <!--<li>Xóa file</li>
-            <li>Đổi tên file</li>-->
             <li><img src="icondongho.png" alt="icon" width="11%"> Lịch sử thao tác
                 <ol style="list-style-type: none;" onclick="goStats()">
                     <li style="margin-left:5%;margin-top: -1.1%;"> <img src="iconfile.png" alt="icon" width="15%"> File đã tạo</li>
@@ -37,12 +44,6 @@
                 </ol>
             </li>
          </ol>
-        </div>
-        <div id="fileTree"></div>
-        <div class="taofile">
-            <button type="button" id="tat">X</button>
-            <input type="text" id="tenFolderMoi">
-            <button type="button" onclick="taoFolder()">Lưu</button>
         </div>
     </div>
       <script src="tang3.js"></script> 

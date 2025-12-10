@@ -3,7 +3,7 @@
     padding:0px;
 }
 .nentrang{
-    position: relative;
+    /* position: relative; */
     height: 100%;
 }
 .quanLiFile{
@@ -14,6 +14,9 @@
     background-color: lightblue;
     position:fixed;
     align-items:center;
+    top:0px;
+    left:0px;
+    z-index:9999;
 }
 .quanLiFile>div{
     display: flex;
@@ -51,9 +54,9 @@
 .xuattrang{
     width:5%;
     height:22px;
-    z-index:9;
-    margin-top: 5.5%;
-    margin-left:93.55%;
+    z-index:10000;
+    top:10%;
+    right:0.8%;
     background-color: white;
     color:rgb(20, 57, 106);
     position:absolute;
@@ -76,7 +79,7 @@
     color:rgb(20, 57, 106);
     top:87.5px;
     position:fixed;
-    height:88vh;
+    height:100%;
     width:15%;
 }
 ol{
@@ -104,7 +107,6 @@ li:hover>ol{
     display: block;
 }
 .content{
-    position:fixed;
     border:1px solid rgb(191, 194, 197);
     margin-top: 87.5px;       
     margin-left: 15%;      
@@ -114,73 +116,93 @@ li:hover>ol{
     width:70%;
     display:flex;
     border-radius: 2px;
+    flex-wrap: wrap;
 }
-.content div{
-    width:33%;
-    height:200px;
+/* .content div{
+    width:43%;
+    height:250px;
     border:1px solid rgb(132, 133, 134);
     border-radius: 10px;
     background-color: #f2f2f5;
     box-shadow:5px 10px #c9c9cd;
-    padding:10px;
-}
+    padding:20px;
+    margin-left:20px;
+    margin-top:12px;
+} */
 .khungthongke{
     width:13%;
     height:2000px;
-    margin-top: 87.5px;       
+    top: 87.5px;       
     left: 87.9%; 
     position:fixed;
     border:1px solid rgb(191, 194, 197);
     border-radius: 2px;
     background-color: #f5f6fa;
-    padding:10px;
+    padding:20px;
 }
 .taofile{
-    display:flex;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    width: 400px;
-    height: 100px;
-    color:rgb(20, 57, 106);
-    background-color: lightblue;
-    box-sizing: border-box;
-    padding-top: 20px;
-    gap: 10px;
-    top: 50%;
-    left: 30%;
-    z-index: 3;
+    position:relative;
+    width:43%;
+    height:250px;
+    border:1px solid rgb(132, 133, 134);
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    box-shadow:5px 10px #c9c9cd;
+    padding:20px;
+    margin-left:20px;
+    margin-top:12px;
+    display:none;
 }
 .taofile input{
-    border: none;
+    position:absolute;
+    border: 1px solid gray;
     width: 65%;
     height: 30px;
-    margin-left: 15%;
     color:rgb(20, 57, 106);
-    background-color: lightblue;
-    border-radius: 10px;
+    border-radius: 20px;
+    top:4%;
+    left:4%;
 }
 .taofile button{
-    width: 30%;
-    margin-left: 70%;
+    position:absolute;
+    width: 10%;
     color:rgb(20, 57, 106);
-    background-color: lightblue;
-    border: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+    right:4%;
+    bottom:4%;
 }
 #tat{
-    width: 30%;
-    margin-left: 70%;
+    position:absolute;
+    width: 5%;
+    height:20px;
     color:rgb(20, 57, 106);
-    background-color: lightblue;
-    border: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+    right:4%;
+    top:4%;
 }
 #fileTree {
-    position: absolute;
-    z-index: 20;
-    top: 80px;
-    right:20px;
+    border:1px solid rgb(191, 194, 197);
+    margin-top: 0%;       
+    margin-left: 3%;      
+    padding: 20px;
+    height: 1980px;          
+    background-color: #f5f6fa;
+    width:90%;
+    display:flex;
+    border-radius: 2px;
+    flex-wrap: wrap;
 }
-#fileTree div {
-    position: relative; 
+#fileTree div { 
+    /* width:43%;
+    height:250px;
+    border:1px solid rgb(132, 133, 134);
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    box-shadow:5px 10px #c9c9cd;
+    padding:20px;
+    margin-left:20px;
+    margin-top:0px; */
     cursor: pointer;
 }
