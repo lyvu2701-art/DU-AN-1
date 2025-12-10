@@ -45,7 +45,7 @@ function HienThiFolder(Folder, contain){
     contain.innerHTML = "";
     let dem = 0;
     for(let name in Folder.children){
-        dem += 1;
+        
         let item = document.createElement("div");
         item.id="khungfile";
         let logofolder=document.createElement("img");
@@ -79,6 +79,7 @@ function HienThiFolder(Folder, contain){
 
         // click để mở file
         if (Folder.children[name].type === "folder"){
+            dem += 1;
             //let tenfolder = name;
             b.onclick = () => {
                 localStorage.setItem("tenfolder", name);
