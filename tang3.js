@@ -44,27 +44,30 @@ function HienThiFolder(Folder, contain){
     contain.innerHTML = "";
     for(let name in Folder.children){
         let item = document.createElement("div");
-        item.style.border = "1px solid";
         item.style.display = "flex";
+        item.style.width="43%";
+        item.style.height="250px";
+        item.style.borderRadius="10px";
+        item.style.marginTop="0px";
+        let tenfolder=document.createElement("p");
+        tenfolder.textContent="Tên Folder:";
         let b = document.createElement("div");
-        b.style.border = "1px solid";
-        b.style.width = "110px";
         b.textContent = name + (Folder.children[name].type ==="folder"?"/":"");
         item.appendChild(b);
         let c = document.createElement("button");
-        //c.id = "doiTen";
+        c.id = "doiTen";
         c.type = "button";
-        c.textContent = "doi ten";
+        c.textContent = "Đổi tên";
         c.onclick = () => suaFolder(Folder, name);
         item.appendChild(c);
         let d = document.createElement("button");
-        //d.id = "xoa";
+        d.id = "xoa";
         d.type = "button";
-        d.textContent = "Xoa";
+        d.textContent = "Xoá";
         d.onclick = () => Xoa(Folder, name);
         item.appendChild(d);
         contain.appendChild(item);
-        //item.style.cursor = "pointer";
+        item.style.cursor = "pointer";
         // click để đổi tên
         
         /*item.onclick = (e) => {
