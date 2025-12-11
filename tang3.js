@@ -86,7 +86,8 @@ function HienThiFolder(Folder, contain){
             b.onclick = () => {
                 localStorage.setItem("tenfolder", name);
                 window.location.href = "trang4.html";
-            };/*{
+            }
+            /*{
                 HienThiFolder(Folder.children[name], contain);
             }*/
         }
