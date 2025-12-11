@@ -96,6 +96,9 @@ function HienThiFile(Folder, contain){
     
 }
 HienThiFile(root, document.getElementById("fileTree1"));
+function goStats(){
+    window.location.href = "LichSu.html";
+}
 function dangxuat(){
     document.querySelector(".xuattrang").style.display="block";
 }
@@ -108,3 +111,38 @@ function xuattrang(){
 function trangchu(){
     window.location.href="trang3.html";
 }
+
+//dếm file ,folder
+
+let user = users[DaDangNhap];
+if(!DaDangNhap || !user){
+    alert("Vui lòng đăng nhập để xem lịch sử hoạt động!");
+    window.location.href = "trang1.html";
+}
+else{
+    var root1 = users[DaDangNhap].drive;
+}
+function hienThi(){
+    let demfolder = 0;
+    let demfile = 0;
+
+    // Duyệt tất cả folder trong root1
+    for (let folderName in root1.children) {
+        let folder = root1.children[folderName];
+
+        if (folder.type === "folder") {
+            demfolder += 1;
+
+            // Đếm file trong folder
+            for (let fileName in folder.children) {
+                let file = folder.children[fileName];
+                if (file.type === "file") {
+                    demfile += 1;
+                }
+            }
+        }
+    }
+    document.getElementById("Sofolder").textContent += `${demfolder}`;
+    document.getElementById("Sofile").textContent += `${demfile}`;  
+}
+hienThi();

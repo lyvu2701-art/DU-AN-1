@@ -56,3 +56,6 @@ function xuattrang(){
 function trangchu(){
     window.location.href="trang3.html";
 }
+function taofolder(){
+    window.location.href="trang3.html";
+}
