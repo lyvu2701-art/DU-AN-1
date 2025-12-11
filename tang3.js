@@ -153,11 +153,42 @@ function hienThi(){
 hienThi();
 
 //phân quyền
-let phanquyen=localStorage.getItem("phanquyen");
+let phanquyen=localStorage.getItem("quyen");
 if (phanquyen==="admin"){
     console.log("Bạn đang ở chế độ admin!");
 }else{
     console.log("Bạn đang ở chế độ User!");
+}
+window.onload=function(){
+    if (phanquyen==="admin"){
+        hienthiUser();
+    }
+};
+function hienthiUser(){
+    let users = JSON.parse(localStorage.getItem("users")) || {};
+    let tkHientai = localStorage.getItem("DaDangNhap");
+    let dieukhien = document.getElementById("adminPanel");
+    let html = "<h3>Quản lý tài khoản</h3><ul>";
+    for(let i in users){
+        html+=
+        <li>
+            ${i} — <b>${users[i].phanquyen}</b>
+            ${i !== tkHientai ? `<button onclick="xoaUser('${i}')">Xóa</button>` : "(Bạn)"}
+        </li>;
+    }
+    html += "</ul>";
+    dieukhien.innerHTML = html;
+    
+}
+function xoaUser(username){
+    if (!confirm("Bạn có chắc muốn xóa tài khoản " + username + "?")) return;
+
+    let users = JSON.parse(localStorage.getItem("users")) || {};
+    delete users[username];
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    hienthiUser(); 
 }
 
 //hien thi loi chao
