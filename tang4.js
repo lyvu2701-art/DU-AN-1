@@ -1,54 +1,73 @@
 let tenfolder = localStorage.getItem("tenfolder");
 let users = JSON.parse(localStorage.getItem("users"));
 let DaDangNhap = localStorage.getItem("DaDangNhap");
+// kiểm tra dữ liệu
 if (!tenfolder || !users || !users[DaDangNhap] || !users[DaDangNhap].drive.children[tenfolder]) {
     alert("Folder không tồn tại hoặc đã bị xóa. Quay về trang trước.");
     window.location.href = "trang3.html"; // trang chứa danh sách folder
 } else {
     var root = users[DaDangNhap].drive.children[tenfolder];
 }
+// gán sự kiện onclick cho thẻ có class 'con3' để mở popup tạo file
 document.getElementsByClassName("con3")[0].onclick = function(){
     document.querySelector(".con1").style.display="flex";
 }
+// gán sự kiện onclick cho thẻ có id 'TAT' để tắt popup tạo file
 document.getElementById("TAT").onclick = function(){
     document.querySelector(".con1").style.display="none";
 }
+// hàm tạo file
 function taofile(){
     let name= document.getElementById("TenFilemoi").value.trim();
     if(!name){
         alert("Hãy tạo file!");
         return;
     }
+    // thêm folder mới cho đối tượng 'children'
     root.children[name]={
         type: "file",
         content: ""
     }
+    // truy xuất đến thuộc tính có tên là history và thêm phần tử vào cuối danh sách 
     users[DaDangNhap].history.push(`Tạo file '${name}' trong thư mục '${tenfolder}'`);
     CapNhatfile();
     document.getElementById("TenFilemoi").value="";
 }
+// hàm sửa file
 function SuaFlie(file, oldname){
     let Newname = prompt("Đổi tên file:", oldname);
+    // kiểm tra tên mới
     if(!Newname || Newname === oldname){
         alert("trùng tên");
         return;
     }
+    Newname = Newname.trim();
+    if (!Newname) return;
+    if (folder.children[Newname]) {
+        alert("Tên folder đã tồn tại!");
+        return;
+    }
+    // gán giá trị của file cũ cho file mới( tạo thêm 1 biến trỏ tới cùng 1 địa chỉ chính là giá trị của folder cũ)
     file.children[Newname] = file.children[oldname];
     delete file.children[oldname];
     users[DaDangNhap].history.push(`Đổi tên file '${oldname}' thành '${Newname}' trong thư mục '${tenfolder}'`);
     CapNhatfile();
 }
+// hàm xóa tên file
 function Xoafile(file, name){
     if(!confirm(`Xóa file '${name}'?`)) return;
+    // xóa tên file -> mất biến tham chiếu -> giá trị cũng mất
     delete file.children[name];
     users[DaDangNhap].history.push(`Xóa file '${name}' trong thư mục '${tenfolder}'`);
     CapNhatfile();
 }
+// cập nhật lại file trên giao diện
 function CapNhatfile(){
     users[DaDangNhap].drive.children[tenfolder] = root;
     localStorage.setItem("users", JSON.stringify(users));
     HienThiFile(root, document.getElementById("fileTree1"));
 }
+// biến root và Folder đều tham chiếu đến giá trị là thuộc tính 'children' trong đối tượng children của đối tượng drive
 function HienThiFile(Folder, contain){
     contain.innerHTML = "";
     for(let name in Folder.children){

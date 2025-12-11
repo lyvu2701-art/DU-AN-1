@@ -1,46 +1,65 @@
 let DaDangNhap = localStorage.getItem("DaDangNhap");
 let users = JSON.parse(localStorage.getItem("users"));
-let root = users[DaDangNhap].drive;
+let root = users[DaDangNhap].drive; // Lấy đối tượng 'drive' của người dùng hiện tại.
+// mở popup tạo folder
 document.getElementById("TaoFile").onclick = function(){
     document.querySelector(".taofile").style.display = "flex";
 }
+// đóng popup tạo folder
 document.getElementById("tat").onclick = function(){
     document.querySelector(".taofile").style.display = "none";
 }
+// hàm tạo folder
 function taoFolder(){
     let name = document.getElementById("tenFolderMoi").value.trim();
     if(!name){
         alert("Hãy tạo folder!");
         return;
     }
+    // thêm/tạo folder có tên 'name'
     root.children[name] = {
         type: "folder",
         children: {},
     }
+    // lưu vào history của người dùng hiện tại
     users[DaDangNhap].history.push(`Tạo thư mục '${name}'`);
     CapNhat();
      document.getElementById("tenFolderMoi").value = "";
 }
+// hàm sửa tên folder
 function suaFolder(folder, oldname){
     let Newname = prompt("Đổi tên folder:", oldname);
+    //kiểm tra tên mới
     if(!Newname || Newname === oldname) return;
+    Newname = Newname.trim();
+    if (!Newname) return;
+    if (folder.children[Newname]) {
+        alert("Tên folder đã tồn tại!");
+        return;
+    }
+    // gán giá trị của tên folder cũ cho tên folder mới(cùng trỏ đến giá trị)
     folder.children[Newname] = folder.children[oldname];
+    // xóa tên folder cũ(tên cũ không trỏ đến giá trị)
     delete folder.children[oldname];
     users[DaDangNhap].history.push(`Đổi tên '${oldname}' thành '${Newname}'`);
     CapNhat();
 
 }
+// hàm xóa folder
 function Xoa(folder, name){
     if(!confirm(`Xóa'${name}'?`)) return;
+    // xóa tên folder->không trỏ đến giá trị->cùng mất
     delete folder.children[name];
     users[DaDangNhap].history.push(`Xóa'${name}'`);
     CapNhat();
 }
+// hàm cập nhật
 function CapNhat(){
     users[DaDangNhap].drive = root;
     localStorage.setItem("users", JSON.stringify(users));
     HienThiFolder(root, document.getElementById("fileTree"));
 }
+// hàm hiển thị folder ra giao diện
 function HienThiFolder(Folder, contain){
     contain.innerHTML = "";
     for(let name in Folder.children){
@@ -74,7 +93,6 @@ function HienThiFolder(Folder, contain){
         item.append(taofile);
         // click để mở file
         if (Folder.children[name].type === "folder"){
-            // let tenfolder = name;
             taofile.onclick = () => {
                 localStorage.setItem("tenfolder", name);
                 window.location.href = "trang4.html";
@@ -105,9 +123,10 @@ function trangchu(){
 }
 
 
-//dếm file ,folder
+//đếm file ,folder
 
 let user = users[DaDangNhap];
+// kiểm tra trạng thái đăng nhập
 if(!DaDangNhap || !user){
     alert("Vui lòng đăng nhập để xem lịch sử hoạt động!");
     window.location.href = "trang1.html";
@@ -115,6 +134,7 @@ if(!DaDangNhap || !user){
 else{
     var root1 = users[DaDangNhap].drive;
 }
+// hiển thị số lượng ra giao diện
 function hienThi(){
     let demfolder = 0;
     let demfile = 0;
