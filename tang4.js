@@ -7,11 +7,11 @@ if (!tenfolder || !users || !users[DaDangNhap] || !users[DaDangNhap].drive.child
 } else {
     var root = users[DaDangNhap].drive.children[tenfolder];
 }
-document.getElementsByClassName("con3")[0].onclick = function(){
-    document.querySelector(".con1").style.display="flex";
+document.getElementsByClassName("nuttaofile")[0].onclick = function(){
+    document.querySelector(".taofile").style.display="flex";
 }
 document.getElementById("TAT").onclick = function(){
-    document.querySelector(".con1").style.display="none";
+    document.querySelector(".taofile").style.display="none";
 }
 function taofile(){
     let name= document.getElementById("TenFilemoi").value.trim();
@@ -144,15 +144,6 @@ function hienThi(){
     document.getElementById("Sofile").textContent += `${demfile}`;  
 }
 hienThi();
-
-//phân quyền
-let phanquyen=localStorage.getItem("phanquyen");
-if (phanquyen==="admin"){
-    console.log("Bạn đang ở chế độ admin!");
-}else{
-    console.log("Bạn đang ở chế độ User!");
-}
- 
 
 //hien thi loi chao
 let chao=document.getElementById("chaoUser");

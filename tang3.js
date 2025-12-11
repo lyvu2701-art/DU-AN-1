@@ -1,11 +1,11 @@
 let DaDangNhap = localStorage.getItem("DaDangNhap");
 let users = JSON.parse(localStorage.getItem("users"));
 let root = users[DaDangNhap].drive;
-document.getElementById("TaoFile").onclick = function(){
-    document.querySelector(".taofile").style.display = "flex";
+document.getElementById("TaoFolder").onclick = function(){
+    document.querySelector(".taofolder").style.display = "flex";
 }
 document.getElementById("tat").onclick = function(){
-    document.querySelector(".taofile").style.display = "none";
+    document.querySelector(".taofolder").style.display = "none";
 }
 function taoFolder(){
     let name = document.getElementById("tenFolderMoi").value.trim();
@@ -39,7 +39,7 @@ function Xoa(folder, name){
 function CapNhat(){
     users[DaDangNhap].drive = root;
     localStorage.setItem("users", JSON.stringify(users));
-    HienThiFolder(root, document.getElementById("fileTree"));
+    HienThiFolder(root, document.getElementById("folderTree"));
 }
 function HienThiFolder(Folder, contain){
     contain.innerHTML = "";
@@ -87,7 +87,7 @@ function HienThiFolder(Folder, contain){
         }
     }
 } 
-HienThiFolder(root, document.getElementById("fileTree"));
+HienThiFolder(root, document.getElementById("folderTree"));
 function goStats(){
     window.location.href = "LichSu.html";
 }
@@ -139,16 +139,6 @@ function hienThi(){
     document.getElementById("Sofile").textContent += `${demfile}`;  
 }
 hienThi();
-
-//phân quyền
-let phanquyen=localStorage.getItem("quyen");
-if (phanquyen==="admin"){
-    console.log("Bạn đang ở chế độ admin!");
-}else{
-    console.log("Bạn đang ở chế độ User!");
-};
-
-
 //hien thi loi chao
 let chao=document.getElementById("chaoUser");
 if(DaDangNhap){

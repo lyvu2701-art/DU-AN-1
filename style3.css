@@ -28,7 +28,7 @@
     right:0.5%;
 
 }
-.quanLiFile>div{
+/* .quanLiFile>div{
     display: flex;
     width: 40%;
     height: 40%;
@@ -52,7 +52,7 @@
 .logotimkiem{
     margin-top:1px;
     border-radius: 10px;
-}
+} */
 .avatar{
     margin-left:93%;
     margin-top: 0.5%;
@@ -100,16 +100,8 @@ ol li{
     background-color: rgb(231, 244, 248);
     cursor:pointer;
 }
-li>ol{
-    margin-top:5%;
-    margin-left:2.7%;
-    display: none;
-}
 li:hover{
     background-color: lightblue;
-}
-li:hover>ol{
-    display: block;
 }
 .content{
     border:1px solid rgb(191, 194, 197);
@@ -134,7 +126,7 @@ li:hover>ol{
     background-color: #f5f6fa;
     padding:20px;
 }
-.taofile{
+.taofolder{
     position:relative;
     width:30%;
     height:60px;
@@ -146,7 +138,7 @@ li:hover>ol{
     margin-top:12px;
     display:none;
 }
-.taofile input{
+.taofolder input{
     position:absolute;
     border: 1px solid gray;
     width: 65%;
@@ -157,7 +149,7 @@ li:hover>ol{
     left:6%;
     padding-left: 10px;
 }
-.taofile button{
+.taofolder button{
     position:absolute;
     width: 12%;
     border: 1px solid gray;
@@ -167,7 +159,7 @@ li:hover>ol{
     top:38%;
     padding:2px;
 }
-.taofile button:hover{
+.taofolder button:hover{
     background-color: #c9c9cd;
 }
 #tat{
@@ -181,7 +173,7 @@ li:hover>ol{
     top:1%;
     border-style: none;
 }
-#fileTree {
+#folderTree {
     margin-left: 1%;      
     padding: 10px;
     height: 1980px;          
@@ -210,7 +202,7 @@ li:hover>ol{
     margin-left: 0%;
     padding-left: 5px;
 }
-#fileTree button{
+#folderTree button{
     height:20px;
     border:1px solid gray;
     border-radius: 10px;

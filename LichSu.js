@@ -36,8 +36,6 @@ function HienThiLichSu(history, contain){
     contain.innerHTML ="";
     for (let i = history.length - 1; i >=0; i--){
         let item = document.createElement("div");
-        //item.style.border = "1px solid";
-        //item.style.margin = "5px";
         item.textContent = history[i];
         contain.append(item);
     }
@@ -59,9 +57,6 @@ function trangchu(){
 function taofolder(){
     window.location.href="trang3.html";
 }
-
-
-
 //hien thi loi chao
 let chao=document.getElementById("chaoUser");
 if(DaDangNhap){
