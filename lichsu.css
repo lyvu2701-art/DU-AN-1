@@ -19,10 +19,10 @@
 }
 #chaoUser{
     position:absolute;
-    top:80%;
+    top:81%;
     right:0.5%;
 }
-.quanLiFile>div{
+/* .quanLiFile>div{
     display: flex;
     width: 40%;
     height: 40%;
@@ -46,7 +46,7 @@
 .logotimkiem{
     margin-top:1px;
     border-radius: 10px;
-}
+} */
 .avatar{
     margin-left:93%;
     margin-top: 0.5%;
@@ -99,23 +99,15 @@ ol li{
     background-color: rgb(231, 244, 248);
     cursor:pointer;
 }
-li>ol{
-    margin-top:5%;
-    margin-left:2.7%;
-    display: none;
-}
 li:hover{
     background-color: lightblue;
 }
-li:hover>ol{
-    display: block;
-}
 .content{
-    border: none;/*1px solid rgb(191, 194, 197);*/
+    border:1px solid rgb(191, 194, 197);
     margin-top: 87.5px;       
     margin-left: 15%;      
-    padding: 44px 0 20px 34px;
-    height: 2000px;          
+    padding: 20px;
+    height: auto;          
     background-color: #f5f6fa;
     width:70%;
     display:flex;
@@ -123,14 +115,15 @@ li:hover>ol{
     flex-wrap: wrap;
 }
 .content div{
-    height:auto;
+    height:30px;
     width: 96%;
     box-sizing: border-box;
-    padding: 40px 0px 5px 5px;
     border-left: none;
     border-right: none;
     border-top: none;
     border-bottom: 1px solid black;
+    padding:5px;
+    margin-left:15px;
 }
 
 .khungthongke{

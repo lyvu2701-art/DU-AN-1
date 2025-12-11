@@ -2,12 +2,16 @@ let DaDangNhap = localStorage.getItem("DaDangNhap");
 let users = JSON.parse(localStorage.getItem("users"));
 let root = users[DaDangNhap].drive; // Lấy đối tượng 'drive' của người dùng hiện tại.
 // mở popup tạo folder
-document.getElementById("TaoFile").onclick = function(){
-    document.querySelector(".taofile").style.display = "flex";
+//document.getElementById("TaoFile").onclick = function(){
+    //document.querySelector(".taofile").style.display = "flex";
+//}
+//let root = users[DaDangNhap].drive;
+document.getElementById("TaoFolder").onclick = function(){
+    document.querySelector(".taofolder").style.display = "flex";
 }
 // đóng popup tạo folder
 document.getElementById("tat").onclick = function(){
-    document.querySelector(".taofile").style.display = "none";
+    document.querySelector(".taofolder").style.display = "none";
 }
 // hàm tạo folder
 function taoFolder(){
@@ -57,7 +61,7 @@ function Xoa(folder, name){
 function CapNhat(){
     users[DaDangNhap].drive = root;
     localStorage.setItem("users", JSON.stringify(users));
-    HienThiFolder(root, document.getElementById("fileTree"));
+    HienThiFolder(root, document.getElementById("folderTree"));
 }
 // hàm hiển thị folder ra giao diện
 function HienThiFolder(Folder, contain){
@@ -105,7 +109,7 @@ function HienThiFolder(Folder, contain){
         }
     }
 } 
-HienThiFolder(root, document.getElementById("fileTree"));
+HienThiFolder(root, document.getElementById("folderTree"));
 function goStats(){
     window.location.href = "LichSu.html";
 }
@@ -159,16 +163,6 @@ function hienThi(){
     document.getElementById("Sofile").textContent += `${demfile}`;  
 }
 hienThi();
-
-//phân quyền
-let phanquyen=localStorage.getItem("quyen");
-if (phanquyen==="admin"){
-    console.log("Bạn đang ở chế độ admin!");
-}else{
-    console.log("Bạn đang ở chế độ User!");
-};
-
-
 //hien thi loi chao
 let chao=document.getElementById("chaoUser");
 if(DaDangNhap){

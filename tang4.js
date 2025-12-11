@@ -11,10 +11,13 @@ if (!tenfolder || !users || !users[DaDangNhap] || !users[DaDangNhap].drive.child
 // gán sự kiện onclick cho thẻ có class 'con3' để mở popup tạo file
 document.getElementsByClassName("con3")[0].onclick = function(){
     document.querySelector(".con1").style.display="flex";
+}    
+document.getElementsByClassName("nuttaofile")[0].onclick = function(){
+    document.querySelector(".taofile").style.display="flex";
 }
 // gán sự kiện onclick cho thẻ có id 'TAT' để tắt popup tạo file
 document.getElementById("TAT").onclick = function(){
-    document.querySelector(".con1").style.display="none";
+    document.querySelector(".taofile").style.display="none";
 }
 // hàm tạo file
 function taofile(){
@@ -163,15 +166,6 @@ function hienThi(){
     document.getElementById("Sofile").textContent += `${demfile}`;  
 }
 hienThi();
-
-//phân quyền
-let phanquyen=localStorage.getItem("phanquyen");
-if (phanquyen==="admin"){
-    console.log("Bạn đang ở chế độ admin!");
-}else{
-    console.log("Bạn đang ở chế độ User!");
-}
- 
 
 //hien thi loi chao
 let chao=document.getElementById("chaoUser");
