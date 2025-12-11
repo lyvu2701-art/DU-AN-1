@@ -7,7 +7,6 @@ if (!tenfolder || !users || !users[DaDangNhap] || !users[DaDangNhap].drive.child
 } else {
     var root = users[DaDangNhap].drive.children[tenfolder];
 }
-console.log("root =", root);
 document.getElementsByClassName("con3")[0].onclick = function(){
     document.querySelector(".con1").style.display="flex";
 }
@@ -15,8 +14,6 @@ document.getElementById("TAT").onclick = function(){
     document.querySelector(".con1").style.display="none";
 }
 function taofile(){
-    console.log(document.getElementById("TenFilemoi"));
-
     let name= document.getElementById("TenFilemoi").value.trim();
     if(!name){
         alert("Hãy tạo file!");
