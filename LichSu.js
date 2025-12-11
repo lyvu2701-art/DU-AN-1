@@ -59,3 +59,13 @@ function trangchu(){
 function taofolder(){
     window.location.href="trang3.html";
 }
+
+
+
+//hien thi loi chao
+let chao=document.getElementById("chaoUser");
+if(DaDangNhap){
+    chao.textContent="Xin Chào, "+DaDangNhap+"!";
+}else{
+    chao.textContent="";
+}

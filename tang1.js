@@ -15,7 +15,6 @@ function dangNhap(){
         input.placeholder = "Sai mật khẩu!";
         return input;
     }
-
     localStorage.setItem("DaDangNhap", username);
     window.location.href = "trang3.html";
 }

@@ -20,6 +20,7 @@ function taofile(){
     let name= document.getElementById("TenFilemoi").value.trim();
     if(!name){
         alert("Hãy tạo file!");
+        return;
     }
     root.children[name]={
         type: "file",
@@ -146,3 +147,20 @@ function hienThi(){
     document.getElementById("Sofile").textContent += `${demfile}`;  
 }
 hienThi();
+
+//phân quyền
+let phanquyen=localStorage.getItem("phanquyen");
+if (phanquyen==="admin"){
+    console.log("Bạn đang ở chế độ admin!");
+}else{
+    console.log("Bạn đang ở chế độ User!");
+}
+ 
+
+//hien thi loi chao
+let chao=document.getElementById("chaoUser");
+if(DaDangNhap){
+    chao.textContent="Xin Chào, "+DaDangNhap+"!";
+}else{
+    chao.textContent="";
+}

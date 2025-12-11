@@ -10,7 +10,8 @@ document.getElementById("tat").onclick = function(){
 function taoFolder(){
     let name = document.getElementById("tenFolderMoi").value.trim();
     if(!name){
-        alert("Hãy tạo folder!")
+        alert("Hãy tạo folder!");
+        return;
     }
     root.children[name] = {
         type: "folder",
@@ -150,3 +151,19 @@ function hienThi(){
     document.getElementById("Sofile").textContent += `${demfile}`;  
 }
 hienThi();
+
+//phân quyền
+let phanquyen=localStorage.getItem("phanquyen");
+if (phanquyen==="admin"){
+    console.log("Bạn đang ở chế độ admin!");
+}else{
+    console.log("Bạn đang ở chế độ User!");
+}
+
+//hien thi loi chao
+let chao=document.getElementById("chaoUser");
+if(DaDangNhap){
+    chao.textContent="Xin Chào, "+DaDangNhap+"!";
+}else{
+    chao.textContent="";
+}

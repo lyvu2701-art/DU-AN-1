@@ -17,6 +17,11 @@
     left:0px;
     z-index:9999;
 }
+#chaoUser{
+    position:absolute;
+    top:80%;
+    right:0.5%;
+}
 .quanLiFile>div{
     display: flex;
     width: 40%;
@@ -44,7 +49,7 @@
 }
 .avatar{
     margin-left:93%;
-    margin-top: 1%;
+    margin-top: 0.5%;
     width:7%;
     height:53%;
     cursor:pointer;
@@ -54,7 +59,7 @@
     width:5%;
     height:22px;
     z-index:10000;
-    top:10%;
+    top:11%;
     right:0.8%;
     background-color: white;
     color:rgb(20, 57, 106);
