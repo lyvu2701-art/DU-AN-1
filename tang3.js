@@ -79,7 +79,7 @@ function HienThiFolder(Folder, contain){
 
         // click để mở file
         if (Folder.children[name].type === "folder"){
-            let tenfolder = name;
+            // let tenfolder = name;
             taofile.onclick = () => {
                 localStorage.setItem("tenfolder", name);
                 window.location.href = "trang4.html";
@@ -159,42 +159,40 @@ if (phanquyen==="admin"){
 }else{
     console.log("Bạn đang ở chế độ User!");
 }
-window.onload=function(){
-    if (phanquyen==="admin"){
-        hienthiUser();
-    }
-};
-function hienthiUser(){
-    let users = JSON.parse(localStorage.getItem("users")) || {};
-    let tkHientai = localStorage.getItem("DaDangNhap");
-    let dieukhien = document.getElementById("adminPanel");
-    let html = "<h3>Quản lý tài khoản</h3><ul>";
-    for(let i in users){
-        html+=
-        <li>
-            ${i} — <b>${users[i].phanquyen}</b>
-            ${i !== tkHientai ? `<button onclick="xoaUser('${i}')">Xóa</button>` : "(Bạn)"}
-        </li>;
-    }
-    html += "</ul>";
-    dieukhien.innerHTML = html;
+// window.onload=function(){
+//     if (phanquyen==="admin"){
+//         hienthiUser();
+//     }
+// };
+// function hienthiUser(){
+//     let users = JSON.parse(localStorage.getItem("users")) || {};
+//     let tkHientai = localStorage.getItem("DaDangNhap");
+//     let dieukhien = document.getElementById("adminPanel");
+//     let html = "<h3>Quản lý tài khoản</h3><ul>";
+//     for(let i in users){
+//         html+=
+//         <li>
+//             ${i} — <b>${users[i].phanquyen}</b>
+//             ${i !== tkHientai ? `<button onclick="xoaUser('${i}')">Xóa</button>` : "(Bạn)"}
+//         </li>;
+//     }
+//     html += "</ul>";
+//     dieukhien.innerHTML = html;
     
-}
-function xoaUser(username){
-    if (!confirm("Bạn có chắc muốn xóa tài khoản " + username + "?")) return;
+// }
+// function xoaUser(username){
+//     if (!confirm("Bạn có chắc muốn xóa tài khoản " + username + "?")) return;
 
-    let users = JSON.parse(localStorage.getItem("users")) || {};
-    delete users[username];
+//     let users = JSON.parse(localStorage.getItem("users")) || {};
+//     delete users[username];
 
-    localStorage.setItem("users", JSON.stringify(users));
+//     localStorage.setItem("users", JSON.stringify(users));
 
-    hienthiUser(); 
-}
+//     hienthiUser(); 
+// }
 
 //hien thi loi chao
 let chao=document.getElementById("chaoUser");
 if(DaDangNhap){
     chao.textContent="Xin Chào, "+DaDangNhap+"!";
-}else{
-    chao.textContent="";
 }

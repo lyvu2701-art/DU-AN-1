@@ -12,7 +12,7 @@ function dangKy(){
         return input.placeholder;
     }
     //phan quyen
-    let phanquyen=prompt("Bạn muốn đăng ký với quyền gì? (admin/user)").toLowerCase();
+    let phanquyen=prompt("Bạn muốn đăng ký với quyền gì? (admin/user)");
     if (phanquyen!="admin"&& phanquyen!="user"){
         phanquyen="user";
     }
