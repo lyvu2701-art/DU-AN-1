@@ -1,120 +1,208 @@
 *{
     margin:0px;
+    padding:0px;
 }
 .nentrang{
-    /*backdrop-filter:blur(50px);*/
-    position: relative;
+    /* position: relative; */
     height: 100%;
-    /*width: 100%;*/
-}
-.lopPhu{
-    position: absolute;
-    background: radial-gradient(circle, transparent 25%, rgb(202, 221, 227) 100%);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 5;
 }
 .quanLiFile{
-    position: absolute;
     display: flex;
-    width: 80%;
-    gap: 50px;
-    top: 10px;
-    left: 15%;
+    width: 100%;
+    height:87.5px;
     color:rgb(20, 57, 106);
     background-color: lightblue;
-    margin:auto;
-    padding:10px;
+    position:fixed;
+    align-items:center;
+    top:0px;
+    left:0px;
+    z-index:9999;
 }
 .quanLiFile>div{
     display: flex;
-    width: 60%;
-    height: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
+    width: 40%;
+    height: 40%;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-left: 11%;
+    margin-top:1.6%;
 }
 .quanLiFile input{
-    width: 90%;
-    border-radius: 10px;
+    width: 95%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     border: 1px solid white;
 }
 .quanLiFile button{
-    border-radius: 10px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     border: 1px solid white;
+    cursor:pointer;
 }
-.quanLiFile img{
+.logotimkiem{
+    margin-top:1px;
     border-radius: 10px;
-    border: 1px solid white;
-    
+}
+.avatar{
+    margin-left:93%;
+    margin-top: 1%;
+    width:7%;
+    height:53%;
+    cursor:pointer;
+    position:absolute;
+}
+.xuattrang{
+    width:5%;
+    height:22px;
+    z-index:10000;
+    top:10%;
+    right:0.8%;
+    background-color: white;
+    color:rgb(20, 57, 106);
+    position:absolute;
+    cursor:pointer;
+    border:1px solid rgb(224, 224, 224);
+    border-radius: 12px;
+    padding:4px;
+    display:none;
+}
+.xuattrang:hover{
+    background-color:  rgb(231, 244, 248);
+}
+.quanLiFile h2{
+    margin-top:1.3%;
+    margin-left:1.5%;
+    cursor:pointer;
+}
+.khungdoc{
+    background-color: rgb(231, 244, 248);
+    color:rgb(20, 57, 106);
+    top:87.5px;
+    position:fixed;
+    height:100%;
+    width:15%;
 }
 ol{
-    position: absolute;
-    top: 70px;
+    margin-top: 5%;
 }
 ol li{
-    position: relative;
+    padding-left: 4.5%;
     height: 30px;
-    border: 1px solid white;
-    width: 110px;
-    padding-top: 7px;
-    color: white;
-    background: gray;
+    border-radius: 10px;
+    width: 80%;
+    padding-top:3%;
+    color:rgb(20, 57, 106);
+    background-color: rgb(231, 244, 248);
+    cursor:pointer;
 }
 li>ol{
-    position: absolute;
-    top: 100%;
+    margin-top:5%;
+    margin-left:2.7%;
     display: none;
 }
 li:hover{
-    text-decoration: underline;
+    background-color: lightblue;
 }
 li:hover>ol{
     display: block;
 }
-.taofile{
+.content{
+    border:1px solid rgb(191, 194, 197);
+    margin-top: 87.5px;       
+    margin-left: 15%;      
+    padding: 20px;
+    height: 2000px;          
+    background-color: #f5f6fa;
+    width:70%;
     display:flex;
-    flex-direction: column;
-    position: absolute;
-    width: 400px;
-    height: 100px;
-    background: rgb(119, 118, 118);
-    box-sizing: border-box;
-    padding-top: 20px;
-    gap: 10px;
-    top: 50%;
-    left: 30%;
-    z-index: 6;
+    border-radius: 2px;
+    flex-wrap: wrap;
+}
+/* .content div{
+    width:43%;
+    height:250px;
+    border:1px solid rgb(132, 133, 134);
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    box-shadow:5px 10px #c9c9cd;
+    padding:20px;
+    margin-left:20px;
+    margin-top:12px;
+} */
+.khungthongke{
+    width:13%;
+    height:2000px;
+    top: 87.5px;       
+    left: 87.9%; 
+    position:fixed;
+    border:1px solid rgb(191, 194, 197);
+    border-radius: 2px;
+    background-color: #f5f6fa;
+    padding:20px;
+}
+.taofile{
+    position:relative;
+    width:43%;
+    height:250px;
+    border:1px solid rgb(132, 133, 134);
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    box-shadow:5px 10px #c9c9cd;
+    padding:20px;
+    margin-left:20px;
+    margin-top:12px;
+    display:none;
 }
 .taofile input{
-    border: none;
-    width: 70%;
+    position:absolute;
+    border: 1px solid gray;
+    width: 65%;
     height: 30px;
-    margin-left: 15%;
-    background: gray;
-    color: white;
-    border-radius: 10px;
+    color:rgb(20, 57, 106);
+    border-radius: 20px;
+    top:4%;
+    left:4%;
 }
 .taofile button{
-    width: 30%;
-    margin-left: 70%;
-    background: rgb(119, 118, 118);
-    border: none;
-    color: white;
+    position:absolute;
+    width: 10%;
+    color:rgb(20, 57, 106);
+    border: 1px solid gray;
+    border-radius: 5px;
+    right:4%;
+    bottom:4%;
 }
-.taofile,
-.lopPhu {
-    display: none;
-}
-#openCreate:checked ~ .nentrang .taofile,
-#openCreate:checked ~ .nentrang .lopPhu {
-    display: block;
+#tat{
+    position:absolute;
+    width: 5%;
+    height:20px;
+    color:rgb(20, 57, 106);
+    border: 1px solid gray;
+    border-radius: 5px;
+    right:4%;
+    top:4%;
 }
 #fileTree {
-    position: relative;
-    z-index: 20; /* tốt rồi */
+    border:1px solid rgb(191, 194, 197);
+    margin-top: 0%;       
+    margin-left: 3%;      
+    padding: 20px;
+    height: 1980px;          
+    background-color: #f5f6fa;
+    width:90%;
+    display:flex;
+    border-radius: 2px;
+    flex-wrap: wrap;
 }
-#fileTree div {
-    position: relative; /* không absolute nữa */
+#fileTree div { 
+    /* width:43%;
+    height:250px;
+    border:1px solid rgb(132, 133, 134);
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    box-shadow:5px 10px #c9c9cd;
+    padding:20px;
+    margin-left:20px;
+    margin-top:0px; */
     cursor: pointer;
 }

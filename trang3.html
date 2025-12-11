@@ -7,36 +7,43 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="checkbox" id="openCreate" hidden>
     <div class="nentrang">
-        <img src="backgroundtrang1.jpg" alt="ảnh xanh pastel" width="100%" height="100%">
         <div class="quanLiFile">
-            <p>QUẢN LÍ FILE</p>
+            <h2>QUẢN LÍ FILE</h2>
             <div>
-                <input type="text" name="file" placeholder="&#9755; tìm kiếm file">
-                <button type="button" onclick=""><img src="" alt="ảnh"></button>
+                <input type="search" name="file" placeholder="  &#9755; tìm kiếm...">
+                <button type="button" onclick=""><img class="logotimkiem" src="logoTimKiem.png" width="30px" height="30px" alt="logo tìm kiếm"></button>
             </div>
-            <img src="" alt="ảnh đại diện" width="">
-        </div >
-        <ol>
-            <label for="openCreate">
-               <li>Tạo file mới</li>
-            </label>
-            <!--<li>Xóa file</li>
-            <li>Đổi tên file</li>-->
-            <li>Lịch sử thao tác
-                <ol onclick="goStats()">
-                    <li>file đã tạo</li>
-                    <li>file đã Xóa</li>
-                    <li>file đã đổi tên</li>
+            <img class="avatar"  src="avatar.png" alt="ảnh đại diện" onclick="dangxuat()" ondblclick="bienmatdx()">
+        </div>
+        <div class="xuattrang" onclick="xuattrang()"> Đăng xuất</div>
+        <div class="content">
+            <div class="taofile" >
+                <button type="button" id="tat">X</button>
+                <input type="text" id="tenFolderMoi">
+                <button type="button" onclick="taoFolder()">Lưu</button>
+            </div>
+            <div id="fileTree"></div>
+        </div>
+        <div class="khungthongke">
+            <h3>Thống kê:</h3>
+            <p>&nbsp;</p>
+            <p>Số folder đã tạo:</p>
+            <p>Số file đã tạo:</p>
+            <p>Số file đã xoá:</p>
+            <p>Số file đã đổi tên:</p>
+        </div>
+        <div class="khungdoc">
+         <ol style="list-style-type: none;">
+            <li id="TaoFile"> <img src="iconfolder.png" alt="icon" width="11%"> Tạo file mới</li>
+            <li><img src="icondongho.png" alt="icon" width="11%"> Lịch sử thao tác
+                <ol style="list-style-type: none;" onclick="goStats()">
+                    <li style="margin-left:5%;margin-top: -1.1%;"> <img src="iconfile.png" alt="icon" width="15%"> File đã tạo</li>
+                    <li style="margin-left:5%"> <img src="iconfile.png" alt="icon" width="15%"> File đã Xóa</li>
+                    <li style="margin-left:5%"> <img src="iconfile.png" alt="icon" width="15%"> File đã đổi tên</li>
                 </ol>
             </li>
-        </ol>
-        <div id="fileTree"></div>
-        <div class="lopPhu"></div>
-        <div class="taofile">
-            <input type="text" id="tenFolderMoi">
-            <button type="button" onclick="taoFolder()">Lưu</button>
+         </ol>
         </div>
     </div>
       <script src="tang3.js"></script> 
