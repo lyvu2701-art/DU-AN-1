@@ -72,11 +72,6 @@ function HienThiFolder(Folder, contain){
         taofile.id="taofilemoi";
         taofile.textContent="Tạo file";
         item.append(taofile);
-        // click để đổi tên    
-        /*item.onclick = (e) => {
-            e.stopPropagation(); // quan trọng
-            HienThiFolder(Folder.children[name], contain);*/
-
         // click để mở file
         if (Folder.children[name].type === "folder"){
             // let tenfolder = name;
@@ -88,15 +83,8 @@ function HienThiFolder(Folder, contain){
                 localStorage.setItem("tenfolder", name);
                 window.location.href = "trang4.html";
             }
-            /*{
-                HienThiFolder(Folder.children[name], contain);
-            }*/
+            
         }
-        //click chuột phải để xóa
-        /*item.oncontextmenu = (e) => {
-            e.preventDefault();
-            Xoa(Folder, name);
-        }*/
     }
 } 
 HienThiFolder(root, document.getElementById("fileTree"));
@@ -158,38 +146,8 @@ if (phanquyen==="admin"){
     console.log("Bạn đang ở chế độ admin!");
 }else{
     console.log("Bạn đang ở chế độ User!");
-}
-// window.onload=function(){
-//     if (phanquyen==="admin"){
-//         hienthiUser();
-//     }
-// };
-// function hienthiUser(){
-//     let users = JSON.parse(localStorage.getItem("users")) || {};
-//     let tkHientai = localStorage.getItem("DaDangNhap");
-//     let dieukhien = document.getElementById("adminPanel");
-//     let html = "<h3>Quản lý tài khoản</h3><ul>";
-//     for(let i in users){
-//         html+=
-//         <li>
-//             ${i} — <b>${users[i].phanquyen}</b>
-//             ${i !== tkHientai ? `<button onclick="xoaUser('${i}')">Xóa</button>` : "(Bạn)"}
-//         </li>;
-//     }
-//     html += "</ul>";
-//     dieukhien.innerHTML = html;
-    
-// }
-// function xoaUser(username){
-//     if (!confirm("Bạn có chắc muốn xóa tài khoản " + username + "?")) return;
+};
 
-//     let users = JSON.parse(localStorage.getItem("users")) || {};
-//     delete users[username];
-
-//     localStorage.setItem("users", JSON.stringify(users));
-
-//     hienthiUser(); 
-// }
 
 //hien thi loi chao
 let chao=document.getElementById("chaoUser");
