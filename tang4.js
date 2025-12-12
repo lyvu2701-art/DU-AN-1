@@ -171,3 +171,8 @@ if(DaDangNhap){
 }else{
     chao.textContent="";
 }
+
+//button quay lại trang tao folder
+function qltaofolder(){
+    window.location.href="trang3.html";
+}

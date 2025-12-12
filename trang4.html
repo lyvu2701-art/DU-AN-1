@@ -11,10 +11,6 @@
         <div class="quanLiFile">
             <h2 onclick="trangchu()">QUẢN LÍ FILE</h2>
             <h5 id="chaoUser"></h5>
-            <!-- <div>
-                <input type="text" name="file" placeholder="  &#9755; tìm kiếm...">
-                <button type="button" onclick=""><img class="logotimkiem" src="logoTimKiem.png" width="30px" height="30px" alt="logo tìm kiếm"></button>
-            </div> -->
             <img class="avatar"  src="avatar.png" alt="ảnh đại diện" onclick="dangxuat()" ondblclick="bienmatdx()">
         </div>
         <div class="xuattrang" onclick="xuattrang()"> Đăng xuất</div>
@@ -26,10 +22,11 @@
         </div>
         <div class="content">
             <div class="taofile">
-            <button type="button" id="TAT">X</button>
+            <button id="TAT">X</button>
             <input type="text" id="TenFilemoi" placeholder="Nhập tên file...">
-            <button type="button" onclick="taofile()">Lưu</button>
+            <button onclick="taofile()">Lưu</button>
             </div>
+            <button id ="nutqltaofolder" onclick="qltaofolder()">&larr;</button>
             <div id="fileTree1"></div>
         </div>
         <div class="khungthongke">
