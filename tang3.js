@@ -71,7 +71,7 @@ function HienThiFolder(Folder, contain){
         item.append(logofolder);
         let b = document.createElement("div");
         b.id="tenfolder";
-        b.textContent = name + (Folder.children[name].type ==="folder"?"/":"");
+        b.textContent = name 
         item.appendChild(b);
         let c = document.createElement("button");
         c.id = "doiTen";
