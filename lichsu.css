@@ -78,12 +78,10 @@ li:hover{
     background-color: lightblue;
 }
 .content{
-    border:1px solid rgb(191, 194, 197);
     margin-top: 87.5px;       
     margin-left: 15%;      
     padding: 20px;
     height: auto;          
-    background-color: #f5f6fa;
     width:70%;
     display:flex;
     border-radius: 2px;

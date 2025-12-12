@@ -1,7 +1,6 @@
 function dangNhap(){
     const username = document.getElementsByName("ten")[0].value;
     const password = document.getElementsByName("matKhau")[0].value;
-    
     let users = JSON.parse(localStorage.getItem("users")) || {};
     if (!users[username]){
         var input = document.getElementsByName("ten")[0];
