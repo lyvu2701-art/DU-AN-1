@@ -8,10 +8,7 @@ if (!tenfolder || !users || !users[DaDangNhap] || !users[DaDangNhap].drive.child
 } else {
     var root = users[DaDangNhap].drive.children[tenfolder];
 }
-// gán sự kiện onclick cho thẻ có class 'con3' để mở popup tạo file
-document.getElementsByClassName("con3")[0].onclick = function(){
-    document.querySelector(".con1").style.display="flex";
-}    
+// gán sự kiện onclick cho thẻ có class 'con3' để mở popup tạo file    
 document.getElementsByClassName("nuttaofile")[0].onclick = function(){
     document.querySelector(".taofile").style.display="flex";
 }

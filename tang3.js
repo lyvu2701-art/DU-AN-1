@@ -2,10 +2,6 @@ let DaDangNhap = localStorage.getItem("DaDangNhap");
 let users = JSON.parse(localStorage.getItem("users"));
 let root = users[DaDangNhap].drive; // Lấy đối tượng 'drive' của người dùng hiện tại.
 // mở popup tạo folder
-//document.getElementById("TaoFile").onclick = function(){
-    //document.querySelector(".taofile").style.display = "flex";
-//}
-//let root = users[DaDangNhap].drive;
 document.getElementById("TaoFolder").onclick = function(){
     document.querySelector(".taofolder").style.display = "flex";
 }
