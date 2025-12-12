@@ -34,7 +34,7 @@ function suaFolder(folder, oldname){
     Newname = Newname.trim();
     if (!Newname) return;
     if (folder.children[Newname]) {
-        alert("Tên folder đã tồn tại!");
+        alert("Tên folder đã tồn tại!Hãy nhập tên khác!");
         return;
     }
     // gán giá trị của tên folder cũ cho tên folder mới(cùng trỏ đến giá trị)

@@ -37,14 +37,11 @@ function taofile(){
 function SuaFlie(file, oldname){
     let Newname = prompt("Đổi tên file:", oldname);
     // kiểm tra tên mới
-    if(!Newname || Newname === oldname){
-        alert("trùng tên");
-        return;
-    }
+    if(!Newname || Newname === oldname)return;
     Newname = Newname.trim();
     if (!Newname) return;
-    if (folder.children[Newname]) {
-        alert("Tên folder đã tồn tại!");
+    if (file.children[Newname]) {
+        alert("Tên file đã tồn tại!Hãy nhập tên khác!");
         return;
     }
     // gán giá trị của file cũ cho file mới( tạo thêm 1 biến trỏ tới cùng 1 địa chỉ chính là giá trị của folder cũ)
