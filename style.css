@@ -1,13 +1,14 @@
 *{
     margin:0px;
+    padding:0px;
 }
 .nentrang{
-    height: 100%;
+    height: auto;
     display:flex;
 }
 .khung1{
-    width:65%;
-    height:100%;
+    width:60%;
+    height:auto;
     background-color: rgb(212, 239, 248);
     text-align: center;
     color:rgb(20, 57, 106);
@@ -15,8 +16,8 @@
     font-size: 160%;
 }
 .khung2{
-    width:45%;
-    height:100%;
+    width:40%;
+    height:auto;
     background-color: white;
     text-align: center;
     padding-left: 4%;
@@ -39,7 +40,7 @@
 .dangnhap  input{
     font-size: 15px;
     width: 70%;
-    height: 45%;
+    height: 25px;
     margin-bottom: 5%;
     border-radius: 15px;
     border-style: hidden;
@@ -63,9 +64,9 @@ h1{
 h2{
     margin-bottom: 5%;
 }
-.dangnhap a{
+.dangnhap span{
     color:blue;
-    text-decoration:none;
+    cursor:pointer;
 }
 .dangnhap  button:hover{
     background-color: rgb(54, 169, 219);
@@ -81,11 +82,12 @@ h2{
     text-align: center;
     padding-top:10%;
     padding-bottom: 10%;
+    display:none;
 }
 .dangky input{
     font-size: 15px;
     width: 70%;
-    height: 45%;
+    height: 25px;
     margin-bottom: 5%;
     border-radius: 15px;
     border-style: hidden;
@@ -106,9 +108,9 @@ h2{
 .dangky  button:hover{
     background-color: rgb(54, 169, 219);
 }
-.dangky a{
+.dangky span{
     color:blue;
-    text-decoration:none;
+    cursor:pointer;
 }
 
 

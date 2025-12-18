@@ -83,23 +83,12 @@ li:hover{
     margin-top: 87.5px;       
     margin-left: 15%;      
     padding: 20px;
-    height: 2000px;          
+    height: auto;          
     background-color: #f5f6fa;
-    width:70%;
+    width:83%;
     display:flex;
     border-radius: 2px;
     flex-wrap: wrap;
-}
-.khungthongke{
-    width:13%;
-    height:2000px;
-    top: 87.5px;       
-    left: 87.9%; 
-    position:fixed;
-    border:1px solid rgb(191, 194, 197);
-    border-radius: 2px;
-    background-color: #f5f6fa;
-    padding:20px;
 }
 .taofolder{
     position:relative;
@@ -206,5 +195,60 @@ li:hover{
     cursor:pointer;
 }
 #taofilemoi:hover{
+    background: #c9c9cd;
+}
+
+
+/* file */
+#fileTree1 {
+    margin-left: 1%;      
+    padding: 10px;
+    height: 1980px;          
+    background-color: #f5f6fa;
+    width:100%;
+    margin-top: 15px;
+}
+#khungfile{
+    width:35%;
+    height:35px;
+    border:1px solid gray;
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    cursor: pointer;
+    padding-left: 10px;
+    box-shadow:5px 10px #c9c9cd;
+    display:flex;
+    margin-top: 25px;
+}
+#tenfile{
+    width:43%;
+    height:20px;
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    margin-top:3%;
+    margin-left: 0%;
+    padding-left: 5px;
+}
+#fileTree1 button{
+    height:20px;
+    border:1px solid gray;
+    border-radius: 10px;
+    margin-top:3%;
+}
+#doiTen{
+    margin-left: 10px;
+    padding:0px 3px;
+    width:auto;
+    cursor:pointer;
+}
+#doiTen:hover{
+    background: #c9c9cd;
+}
+#xoa{ 
+    padding:0px 5px;
+    width:auto;
+    cursor:pointer;
+}
+#xoa:hover{
     background: #c9c9cd;
 }

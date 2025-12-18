@@ -18,11 +18,21 @@
         <div class="dangnhap">
             <h2>ĐĂNG NHẬP</h2>
             <form>
-                <input type="text" name="ten" placeholder="Tên đăng nhập...">
-                <input type="password" name="matKhau" placeholder="Mật khẩu...">
+                <input type="text" name="tenDN" placeholder="Tên đăng nhập...">
+                <input type="password" name="matKhauDN" placeholder="Mật khẩu...">
                 <p></p>
-                <button type="button" onclick="dangNhap()">Đăng Nhập</button><br>
-                <p>Bạn chưa có tài khoản? <a href="trang2.html">Đăng ký ngay!</a></p>
+                <button type="button" onclick="dangNhap()">Đăng Nhập</button>
+                <p>Bạn chưa có tài khoản? <span  onclick="hiendangky()">Đăng ký ngay!</span></p>
+            </form>
+        </div>
+        <div class="dangky">
+            <h2 style="text-align: center;">ĐĂNG KÝ TÀI KHOẢN</h2>
+            <form>
+                <input type="text" name="tenDK" placeholder="Tên đăng ký...">
+                <input type="password" name="matKhauDK" placeholder="Mật khẩu...">
+                <p></p>
+                <button type="button" onclick="dangKy()">Đăng ký</button>
+                <p>Bạn đã có tài khoản? <span onclick="hiendangnhap()">Đăng nhập ngay!</span></p>
             </form>
         </div>
         </div>
