@@ -26,7 +26,6 @@
     position:absolute;
     top:81%;
     right:0.5%;
-
 }
 .avatar{
     margin-left:93%;
@@ -37,7 +36,6 @@
     position:absolute;
 }
 .xuattrang{
-    width:5%;
     height:22px;
     z-index:10000;
     top:11%;
@@ -74,6 +72,7 @@ ol li{
     color:rgb(20, 57, 106);
     background-color: rgb(231, 244, 248);
     cursor:pointer;
+    margin-left: 6%;
 }
 li:hover{
     background-color: lightblue;
@@ -144,9 +143,10 @@ li:hover{
     background-color: #f5f6fa;
     width:100%;
     margin-top: 15px;
+    padding-left:50px;
 }
 #khungfolder{ 
-    width:35%;
+    width:30%;
     height:35px;
     border:1px solid gray;
     border-radius: 10px;
@@ -200,16 +200,16 @@ li:hover{
 
 
 /* file */
-#fileTree1 {
+/* #fileTree1 {
     margin-left: 1%;      
     padding: 10px;
     height: 1980px;          
     background-color: #f5f6fa;
     width:100%;
     margin-top: 15px;
-}
+} */
 #khungfile{
-    width:35%;
+    width:25.5%;
     height:35px;
     border:1px solid gray;
     border-radius: 10px;
@@ -219,6 +219,7 @@ li:hover{
     box-shadow:5px 10px #c9c9cd;
     display:flex;
     margin-top: 25px;
+    margin-left: 250px;
 }
 #tenfile{
     width:43%;
@@ -251,4 +252,52 @@ li:hover{
 }
 #xoa:hover{
     background: #c9c9cd;
+}
+.taofile{
+    position:relative;
+    width:30%;
+    height:60px;
+    border:1px solid rgb(205, 206, 206);
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    box-shadow:5px 10px #c9c9cd;
+    margin-left:20px;
+    margin-top:12px;
+    display:none;
+    margin-bottom:30px;
+}
+.taofile button{
+    position:absolute;
+    width: 12%;
+    border: 1px solid gray;
+    color:rgb(20, 57, 106);
+    border-radius: 5px;
+    right:10%;
+    top:38%;
+    padding:2px;
+}
+.taofile input{
+    position:absolute;
+    border: 1px solid gray;
+    width: 65%;
+    height: 30px;
+    color:rgb(20, 57, 106);
+    border-radius: 20px;
+    top:30%;
+    left:6%;
+    padding-left: 10px;
+}
+.taofile button:hover{
+    background-color: #c9c9cd;
+}
+#TAT{
+    position:absolute;
+    width: 5%;
+    height:20px;
+    color:rgb(20, 57, 106);
+    border: 1px solid gray;
+    border-radius: 5px;
+    left:1%;
+    top:1%;
+    border-style: none;
 }

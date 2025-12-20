@@ -183,10 +183,7 @@ function HienThiFolder(Folder, contain){
             }
             else{
                 b1.onclick = () => alert("đây không phải file, không thể mở");
-            }
-                        
-                    
-                        
+            }              
         }
                     
                     
@@ -203,6 +200,9 @@ function HienThiFolder(Folder, contain){
         
     }
 } 
+document.getElementById("TAT").onclick = function(){
+    document.querySelector(".taofile").style.display = "none";
+}
 HienThiFolder(root, document.getElementById("folderTree"));
 function goStats(){
     window.location.href = "LichSu.html";

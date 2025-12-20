@@ -73,6 +73,7 @@ ol li{
     color:rgb(20, 57, 106);
     background-color: rgb(231, 244, 248);
     cursor:pointer;
+    margin-left: 6%;
 }
 li:hover{
     background-color: lightblue;
