@@ -40,7 +40,6 @@ function dangKy(){
         history: []
     }
     localStorage.setItem("users", JSON.stringify(users));
-    localStorage.setItem("DaDangNhap", username);
     alert("Đăng ký thành công!");
     document.querySelector(".dangky").style.display="none";
     document.querySelector(".dangnhap").style.display="block";

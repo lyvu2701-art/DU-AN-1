@@ -83,7 +83,6 @@ function SuaFlie(file, oldname, name){
     // kiểm tra tên mới
     if(!Newname || Newname === oldname)return;
     Newname = Newname.trim();
-    if (!Newname) return;
     if (file.children[Newname]) {
         alert("Tên file đã tồn tại!Hãy nhập tên khác!");
         return;
@@ -145,7 +144,7 @@ function HienThiFolder(Folder, contain){
             document.querySelector(".taofile").style.display = "flex";
         }
         item.append(taofile);
-        // click để mở file
+        // hiển thị file
         for(let name1 in folderObj.children){
             let item1 = document.createElement("div");
             item1.id="khungfile";
@@ -185,17 +184,6 @@ function HienThiFolder(Folder, contain){
                 b1.onclick = () => alert("đây không phải file, không thể mở");
             }              
         }
-                    
-                    
-                
-                /*localStorage.setItem("tenfolder", name);
-                window.location.href = "trang4.html";
-            }
-            b.onclick = () => {
-                localStorage.setItem("tenfolder", name);
-                window.location.href = "trang4.html";
-            }*/
-            
             
         
     }

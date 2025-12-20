@@ -1,4 +1,3 @@
-let tenfolder = localStorage.getItem("tenfolder");
 let DaDangNhap = localStorage.getItem("DaDangNhap");
 let users = JSON.parse(localStorage.getItem("users"));
 let user = users[DaDangNhap];
