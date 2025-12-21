@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ThongKe.css">    
+    <title>QUẢN LÍ FILE</title>
+</head>
+<body>
+    <div class="nentrang">
+        <div class="quanLiFile">
+            <h2 onclick="trangchu()">QUẢN LÍ FILE</h2>
+            <h5 id="chaoUser"></h5>
+            <img class="avatar"  src="avatar.png" alt="ảnh đại diện" onclick="dangxuat()" ondblclick="bienmatdx()">
+        </div>
+        <div class="xuattrang" onclick="xuattrang()"> Đăng xuất</div>
+        <div class="khungdoc">
+         <ol style="list-style-type: none;">
+            <li id="TaoFile" onclick="taofolder()"> <img src="iconfolder.png" alt="icon" width="13%"> Tạo folder</li>
+            <li style="background-color: lightblue;"><img src="icondongho.png" alt="icon" width="11%" onclick="goStats()" > Lịch sử & Thống kê</li>
+         </ol>
+        </div>
+        <div class="content" id="lichsu"></div>
+        <div class="khungthongke">
+            <h3>Thống kê:</h3>
+            <p>&nbsp;</p>
+            <p id="Sofolder">Số folder đã tạo:</p>
+            <p id="Sofile">Số file đã tạo:</p>
+        </div>
+    </div>
+      <script src="ThongKe.js"></script> 
+</body>
+</html>

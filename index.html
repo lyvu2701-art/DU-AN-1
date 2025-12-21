@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>QUẢN LÍ FILE</title>
+</head>
+<body>
+    <div class="nentrang">
+        <div class="khung1">
+            <h1>Chào mừng bạn</h1>
+            <h2>Đến với trình quản lí File !</h2>
+            <img src="nhandanshincute.png" alt="nhãn dán" width="60%" style="margin-top:10%;">
+        </div>
+        <div class="khung2">
+        <img src="nhandanpatrickstar.png" alt="nhãn dán" width="13%" style="position:absolute;top: 8%;right:2%">
+        <div class="dangnhap">
+            <h2>ĐĂNG NHẬP</h2>
+            <form>
+                <input type="text" name="tenDN" placeholder="Tên đăng nhập...">
+                <input type="password" name="matKhauDN" placeholder="Mật khẩu...">
+                <p></p>
+                <button type="button" onclick="dangNhap()">Đăng Nhập</button>
+                <p>Bạn chưa có tài khoản? <span  onclick="hiendangky()">Đăng ký ngay!</span></p>
+            </form>
+        </div>
+        <div class="dangky">
+            <h2 style="text-align: center;">ĐĂNG KÝ TÀI KHOẢN</h2>
+            <form>
+                <input type="text" name="tenDK" placeholder="Tên đăng ký...">
+                <input type="password" name="matKhauDK" placeholder="Mật khẩu...">
+                <p></p>
+                <button type="button" onclick="dangKy()">Đăng ký</button>
+                <p>Bạn đã có tài khoản? <span onclick="hiendangnhap()">Đăng nhập ngay!</span></p>
+            </form>
+        </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

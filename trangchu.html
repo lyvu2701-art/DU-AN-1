@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trangchu.css">    
+    <title>QUẢN LÍ FILE</title>
+</head>
+<body>
+    <div class="nentrang">
+        <div class="quanLiFile">
+            <h2 onclick="trangchu()">QUẢN LÍ FILE</h2>
+            <h5 id="chaoUser"></h5>
+            <img class="avatar"  src="avatar.png" alt="ảnh đại diện" onclick="dangxuat()" ondblclick="bienmatdx()">
+        </div>
+        <div class="xuattrang" onclick="xuattrang()"> Đăng xuất</div>
+        <div class="content">
+            <div class="taofolder">
+                <button id="tat">X</button>
+                <input type="text" id="tenFolderMoi" placeholder="Nhập tên folder...">
+                <button id="luu" onclick="taoFolder()">Lưu</button>
+            </div>
+            <div class="taofile">
+                    <button id="TAT">X</button>
+                    <input type="text" id="TenFilemoi" placeholder="Nhập tên file...">
+                    <button onclick="taofile()">Lưu</button>
+            </div>
+            <div id="folderTree"></div>
+        </div>
+        <div class="khungdoc">
+         <ol style="list-style-type: none;">
+            <li id="TaoFolder" style="background-color: lightblue;"> <img src="iconfolder.png" alt="icon" width="13%"> Tạo folder</li>
+            <li onclick="goStats()"><img src="icondongho.png" alt="icon" width="11%" > Lịch sử & Thống kê</li>
+         </ol>
+        </div>
+    </div>
+      <script src="trangchu.js"></script> 
+</body>
+</html>

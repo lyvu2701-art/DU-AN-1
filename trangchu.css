@@ -1,0 +1,313 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.nentrang{
+    height: 100%;
+}
+.quanLiFile{
+    display: flex;
+    width: 100%;
+    height:87.5px;
+    color:rgb(20, 57, 106);
+    background-color: lightblue;
+    position:fixed;
+    align-items:center;
+    top:0px;
+    left:0px;
+    z-index: 1;
+}
+.quanLiFile h2{
+    margin-top:0%;
+    margin-left:1.5%;
+    cursor:pointer;
+}
+#chaoUser{
+    position:absolute;
+    top:81%;
+    right:0.5%;
+}
+.avatar{
+    margin-left:93%;
+    margin-top: 0.5%;
+    width:7%;
+    height:53%;
+    cursor:pointer;
+    position:absolute;
+}
+.xuattrang{
+    height:22px;
+    z-index:1;
+    top:11%;
+    right:0.8%;
+    background-color: white;
+    color:rgb(20, 57, 106);
+    position:fixed;
+    cursor:pointer;
+    border:1px solid rgb(224, 224, 224);
+    border-radius: 12px;
+    padding:4px;
+    display:none;
+}
+.xuattrang:hover{
+    background-color:  rgb(231, 244, 248);
+}
+.khungdoc{
+    background-color: rgb(231, 244, 248);
+    color:rgb(20, 57, 106);
+    top:87.5px;
+    position:fixed;
+    height:100%;
+    width:15%;
+}
+ol{
+    margin-top: 5%;
+}
+ol li{
+    padding-left: 4.5%;
+    height: 30px;
+    border-radius: 10px;
+    width: 80%;
+    padding-top:3%;
+    color:rgb(20, 57, 106);
+    background-color: rgb(231, 244, 248);
+    cursor:pointer;
+    margin-left: 6%;
+}
+li:hover{
+    background-color: lightblue;
+}
+.content{
+    margin-top: 87.5px;       
+    margin-left: 15%;      
+    padding: 20px;
+    height: auto;          
+    width:82%;
+    display:flex;
+    border-radius: 2px;
+    flex-wrap: wrap;
+    color:rgb(20, 57, 106);
+}
+.taofolder{
+    position:relative;
+    width:30%;
+    height:60px;
+    border:1px solid gray;
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    box-shadow:5px 10px #c9c9cd;
+    margin-left:20px;
+    margin-top:12px;
+    display:none;
+}
+.taofolder input{
+    position:absolute;
+    border: 1px solid rgb(207, 207, 208);
+    width: 65%;
+    height: 30px;
+    color:rgb(20, 57, 106);
+    border-radius: 20px;
+    top:30%;
+    left:6%;
+    padding-left: 10px;
+}
+.taofolder button{
+    position:absolute;
+    width: 12%;
+    border: 1px solid gray;
+    color:rgb(20, 57, 106);
+    border-radius: 5px;
+    right:10%;
+    top:38%;
+    padding:2px;
+}
+.taofolder button:hover{
+    background-color: #c9c9cd;
+}
+#tat{
+    position:absolute;
+    width: 5%;
+    height:20px;
+    color:rgb(20, 57, 106);
+    border: 1px solid gray;
+    border-radius: 5px;
+    left:1%;
+    top:1%;
+    border-style: none;
+}
+#folderTree {
+    margin-left: 11%;      
+    height: auto;          
+    width:100%;
+    margin-top: 15px;
+    display:flex;
+    flex-wrap: wrap;
+}
+.khungfolder{ 
+    width:33%;
+    height:auto;
+    margin-top: 25px;
+    margin-right: 150px;
+}
+.khung2{
+    width:100%;
+    height:40px;
+    display:flex;
+    border:1px solid rgb(238, 254, 254);
+    border-radius: 10px;
+    background-color: rgb(202, 235, 246);
+    box-shadow:5px 10px #c9c9cd;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.tenfolder{
+    width:43%;
+    height:20px;
+    border-radius: 10px;
+    background-color: rgb(202, 235, 246);
+    margin-top:3%;
+    margin-left: 0%;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.khung2 button{
+    height:20px;
+    border:1px solid rgb(198, 228, 249);
+    border-radius: 10px;
+    margin-top:3%;
+    background-color:lightblue;
+}
+.khung2 .doiTen{
+    margin-left: 10px;
+    padding:0px 3px;
+    width:auto;
+    cursor:pointer;
+}
+.khung2 .doiTen:hover{
+    background-color:rgb(231, 244, 248);
+}
+.khung2 .xoa{ 
+    padding:0px 5px;
+    width:auto;
+    cursor:pointer;
+}
+.khung2 .xoa:hover{
+    background-color:rgb(231, 244, 248);
+}
+.taofilemoi{
+    padding:0px 3px;
+    width:auto;
+    cursor:pointer;
+}
+.taofilemoi:hover{
+    background-color:rgb(231, 244, 248);
+}
+.khungfile{
+    width:80%;
+    height:auto;
+    border:1px solid gray;
+    border-radius: 10px;
+    background-color:rgb(231, 244, 248);
+    box-shadow:5px 10px #c9c9cd;
+    margin-top: 20px;
+    /* margin-left:50px; */
+}
+.khung1{
+    width:100%;
+    height:35px;
+    display:flex;
+}
+.tenfile{
+    width:43%;
+    height:20px;
+    border-radius: 10px;
+    background-color: rgb(231, 244, 248);
+    margin-top:3%;
+    margin-left: 0%;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.khung1 button{
+    height:20px;
+    border:1px solid rgb(198, 228, 249);
+    border-radius: 10px;
+    margin-top:3%;
+    background-color:rgb(202, 235, 246);
+}
+.khung1 .doiTen{
+    margin-left: 10px;
+    padding:0px 3px;
+    width:auto;
+    cursor:pointer;
+}
+.khung1 .doiTen:hover{
+    background: lightblue;
+}
+.khung1 .xoa{ 
+    padding:0px 5px;
+    width:auto;
+    cursor:pointer;
+}
+.khung1 .xoa:hover{
+    background: lightblue;
+}
+.ndfile{
+    width:100%;
+    height:auto;
+    box-sizing: border-box;
+    padding:5px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    background-color: white;
+    overflow-wrap: break-word;
+    display:none;
+    cursor:pointer;
+}
+.taofile{
+    position:relative;
+    width:30%;
+    height:60px;
+    border:1px solid rgb(205, 206, 206);
+    border-radius: 10px;
+    background-color: #f2f2f5;
+    box-shadow:5px 10px #c9c9cd;
+    margin-left:20px;
+    margin-top:12px;
+    display:none;
+    margin-bottom:30px;
+}
+.taofile button{
+    position:absolute;
+    width: 12%;
+    border: 1px solid gray;
+    color:rgb(20, 57, 106);
+    border-radius: 5px;
+    right:10%;
+    top:38%;
+    padding:2px;
+}
+.taofile input{
+    position:absolute;
+    border: 1px solid gray;
+    width: 65%;
+    height: 30px;
+    color:rgb(20, 57, 106);
+    border-radius: 20px;
+    top:30%;
+    left:6%;
+    padding-left: 10px;
+}
+.taofile button:hover{
+    background-color: #c9c9cd;
+}
+#TAT{
+    position:absolute;
+    width: 5%;
+    height:20px;
+    color:rgb(20, 57, 106);
+    border: 1px solid gray;
+    border-radius: 5px;
+    left:1%;
+    top:1%;
+    border-style: none;
+}
