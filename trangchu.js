@@ -236,7 +236,7 @@ document.getElementById("TAT").onclick = function(){
 }
 HienThiFolder(root, document.getElementById("folderTree"));
 function goStats(){
-    window.location.href = "LichSu.html";
+    window.location.href = "ThongKe.html";
 }
 function dangxuat(){
     document.querySelector(".xuattrang").style.display="block";
