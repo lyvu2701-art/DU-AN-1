@@ -48,16 +48,16 @@ function suaFolder(folder, oldname){
     folder.children[Newname] = folder.children[oldname];
     // xóa tên folder cũ(tên cũ không trỏ đến giá trị)
     delete folder.children[oldname];
-    users[DaDangNhap].history.push(`Đổi tên '${oldname}' thành '${Newname}'`);
+    users[DaDangNhap].history.push(`Đổi tên thư mục '${oldname}' thành '${Newname}'`);
     CapNhat();
 
 }
 // hàm xóa folder
 function Xoa(folder, name){
-    if(!confirm(`Xóa'${name}'?`)) return;
+    if(!confirm(`Xóa folder '${name}'?`)) return;
     // xóa tên folder->không trỏ đến giá trị->cùng mất
     delete folder.children[name];
-    users[DaDangNhap].history.push(`Xóa'${name}'`);
+    users[DaDangNhap].history.push(`Xóa thư mục '${name}'`);
     CapNhat();
 }
 function taofile(){
