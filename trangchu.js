@@ -18,6 +18,11 @@ function taoFolder(){
         alert("Hãy tạo folder!");
         return;
     }
+    if (root.children[name]) {
+        alert("Folder đã tồn tại!");
+        return;
+    }
+
     // thêm/tạo folder có tên 'name'
     root.children[name] = {
         type: "folder",
@@ -218,9 +223,7 @@ function HienThiFolder(Folder, contain){
                     CapNhat();
                 }
             }
-            else{
-                ndfile.onclick = () => alert("đây không phải file, không thể mở");
-            }          
+                    
         }
         item.appendChild(fileContainer);
         b.onclick=()=>{
