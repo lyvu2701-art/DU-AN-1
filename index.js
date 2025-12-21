@@ -15,7 +15,7 @@ function dangNhap(){
         return ;
     }
     localStorage.setItem("DaDangNhap", username);
-    window.location.href = "trang3.html";
+    window.location.href = "trangchu.html";
 }
 function hiendangky(){
     document.querySelector(".dangnhap").style.display="none";

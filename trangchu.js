@@ -112,81 +112,124 @@ function HienThiFolder(Folder, contain){
     for(let name in Folder.children){
         let folderObj = Folder.children[name];
         let item = document.createElement("div");
-        item.id="khungfolder";
+        item.className="khungfolder";
+        let khung2=document.createElement("div");
+        khung2.className="khung2";
+        item.append(khung2);
         let logofolder=document.createElement("img");
         logofolder.src="iconfolder.png";
-        logofolder.id="logofolder2";
-        item.append(logofolder);
+        logofolder.className="logofolder2";
+        khung2.append(logofolder);
         let b = document.createElement("div");
-        b.id="tenfolder";
+        b.className="tenfolder";
         b.textContent = name 
-        item.appendChild(b);
+        khung2.appendChild(b);
         let c = document.createElement("button");
-        c.id = "doiTen";
-        c.type = "button";
+        c.className = "doiTen";
         c.textContent = "Đổi tên";
         c.onclick = () => suaFolder(Folder, name);
-        item.appendChild(c);
+        khung2.appendChild(c);
         let d = document.createElement("button");
-        d.id = "xoa";
-        d.type = "button";
+        d.className = "xoa";
         d.textContent = "Xoá";
         d.onclick = () => Xoa(Folder, name);
-        item.appendChild(d);
+        khung2.appendChild(d);
         contain.appendChild(item);
         //tạo file
         let taofile=document.createElement("button");
-        taofile.id="taofilemoi";
+        taofile.className="taofilemoi";
         taofile.textContent="Tạo file";
         taofile.onclick = () => {
             folderDangTaoFile = folderObj;
             tenFolderDangTaoFile = name;
             document.querySelector(".taofile").style.display = "flex";
         }
-        item.append(taofile);
+        khung2.append(taofile);
+        let fileContainer = document.createElement("div");
+        fileContainer.className = "fileContainer";
+        fileContainer.style.display = "block";
         // hiển thị file
         for(let name1 in folderObj.children){
             let item1 = document.createElement("div");
-            item1.id="khungfile";
+            item1.className="khungfile";
+            let khung1 = document.createElement("div");
+            khung1.className="khung1";
+            item1.append(khung1);
             let logofile=document.createElement("img");
             logofile.src="iconfile.png";
-            logofile.id="logofile2";
-            item1.append(logofile);
+            logofile.className="logofile2";
+            khung1.append(logofile);
             let b1 = document.createElement("div");
-            b1.id="tenfile";
+            b1.className="tenfile";
             b1.textContent = name1;
-            item1.appendChild(b1);
+            khung1.appendChild(b1);
             let c1 = document.createElement("button");
-            c1.id = "doiTen";
-            c1.type = "button";
+            c1.className = "doiTen";
             c1.textContent = "Đổi tên";
             c1.onclick = () => SuaFlie(folderObj, name1, name);
-            item1.appendChild(c1);
+            khung1.appendChild(c1);
             let d1 = document.createElement("button");
-            d1.id = "xoa";
-            d1.type = "button";
+            d1.className = "xoa";
             d1.textContent = "Xoá";
             d1.onclick = () => Xoafile(folderObj, name1, name);
-            item1.appendChild(d1);
-            contain.appendChild(item1);
+            khung1.appendChild(d1);
+            //hiển thi nd trong khung file
+            let ndfile=document.createElement("div");
+            ndfile.className="ndfile";
+            item1.appendChild(ndfile);
+            fileContainer.appendChild(item1);
+            let fileData = folderObj.children[name1];
+            if (fileData.content) {
+                ndfile.textContent = "Nội dung: " + fileData.content;
+                ndfile.style.display = "block";
+            } else {
+                ndfile.style.display = "none";
+            }
+            b1.onclick=()=>{
+                if (fileData.content) {
+                    ndfile.textContent = "Nội dung: " + fileData.content;
+                    ndfile.style.display = "block";
+                } else {
+                    b1.onclick = () => {
+                    let content2 = folderObj.children[name1].content || "";
+                    let newcontent = prompt("File rỗng!Hãy nhập nội dung cho file!:", content2);
+                    if(newcontent === null) return;
+                    ndfile.textContent="Nội dung của file là: "+ newcontent;
+                    ndfile.style.display = "block";
+                    folderObj.children[name1].content = newcontent;
+                    users[DaDangNhap].history.push(`Chỉnh sửa nội dung file '${name1}' trong thư mục '${name}'`);
+                    CapNhat();
+                    }
+                }
+            }
+            b1.ondblclick=()=>{
+                ndfile.style.display = "none";
+            }
             //mở file
             if(folderObj.children[name1].type === "file"){
-                b1.onclick = () => {
-                    let content2 = folderObj.children[name1].content;
+                ndfile.onclick = () => {
+                    let content2 = folderObj.children[name1].content || "";
                     let newcontent = prompt("Nội dung file:", content2);
                     if(newcontent === null) return;
+                    ndfile.textContent="Nội dung của file là: "+ newcontent;
+                    ndfile.style.display = "block";
                     folderObj.children[name1].content = newcontent;
                     users[DaDangNhap].history.push(`Chỉnh sửa nội dung file '${name1}' trong thư mục '${name}'`);
                     CapNhat();
                 }
             }
             else{
-                b1.onclick = () => alert("đây không phải file, không thể mở");
-            }              
+                ndfile.onclick = () => alert("đây không phải file, không thể mở");
+            }          
         }
-            
-        
-    }
+        item.appendChild(fileContainer);
+        b.onclick=()=>{
+            fileContainer.style.display="block";
+        };
+        b.ondblclick=()=>{
+            fileContainer.style.display="none";
+        };     
+    }  
 } 
 document.getElementById("TAT").onclick = function(){
     document.querySelector(".taofile").style.display = "none";
@@ -202,10 +245,10 @@ function bienmatdx(){
     document.querySelector(".xuattrang").style.display="none";
 }
 function xuattrang(){
-    window.location.href="trang1.html";
+    window.location.href="index.html";
 }
 function trangchu(){
-    window.location.href="trang3.html";
+    window.location.href="trangchu.html";
 }
 
 //hien thi loi chao

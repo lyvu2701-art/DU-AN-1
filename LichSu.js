@@ -48,13 +48,13 @@ function bienmatdx(){
     document.querySelector(".xuattrang").style.display="none";
 }
 function xuattrang(){
-    window.location.href="trang1.html";
+    window.location.href="index.html";
 }
 function trangchu(){
-    window.location.href="trang3.html";
+    window.location.href="trangchu.html";
 }
 function taofolder(){
-    window.location.href="trang3.html";
+    window.location.href="trangchu.html";
 }
 //hien thi loi chao
 let chao=document.getElementById("chaoUser");

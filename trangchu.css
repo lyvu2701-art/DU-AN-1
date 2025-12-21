@@ -15,7 +15,7 @@
     align-items:center;
     top:0px;
     left:0px;
-    z-index:9999;
+    z-index: 1;
 }
 .quanLiFile h2{
     margin-top:0%;
@@ -37,12 +37,12 @@
 }
 .xuattrang{
     height:22px;
-    z-index:10000;
+    z-index:1;
     top:11%;
     right:0.8%;
     background-color: white;
     color:rgb(20, 57, 106);
-    position:absolute;
+    position:fixed;
     cursor:pointer;
     border:1px solid rgb(224, 224, 224);
     border-radius: 12px;
@@ -78,13 +78,11 @@ li:hover{
     background-color: lightblue;
 }
 .content{
-    border:1px solid rgb(191, 194, 197);
     margin-top: 87.5px;       
     margin-left: 15%;      
     padding: 20px;
     height: auto;          
-    background-color: #f5f6fa;
-    width:83%;
+    width:82%;
     display:flex;
     border-radius: 2px;
     flex-wrap: wrap;
@@ -137,27 +135,31 @@ li:hover{
     border-style: none;
 }
 #folderTree {
-    margin-left: 1%;      
-    padding: 10px;
-    height: 1980px;          
-    background-color: #f5f6fa;
+    margin-left: 11%;      
+    height: auto;          
     width:100%;
     margin-top: 15px;
-    padding-left:50px;
+    display:flex;
+    flex-wrap: wrap;
 }
-#khungfolder{ 
-    width:30%;
-    height:35px;
+.khungfolder{ 
+    width:33%;
+    height:auto;
+    margin-top: 25px;
+    margin-right: 150px;
+}
+.khung2{
+    width:100%;
+    height:40px;
+    display:flex;
     border:1px solid gray;
     border-radius: 10px;
     background-color: #f2f2f5;
-    cursor: pointer;
-    padding-left: 10px;
     box-shadow:5px 10px #c9c9cd;
-    display:flex;
-    margin-top: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
-#tenfolder{
+.tenfolder{
     width:43%;
     height:20px;
     border-radius: 10px;
@@ -165,6 +167,7 @@ li:hover{
     margin-top:3%;
     margin-left: 0%;
     padding-left: 5px;
+    cursor: pointer;
 }
 #folderTree button{
     height:20px;
@@ -172,56 +175,47 @@ li:hover{
     border-radius: 10px;
     margin-top:3%;
 }
-#doiTen{
+.doiTen{
     margin-left: 10px;
     padding:0px 3px;
     width:auto;
     cursor:pointer;
 }
-#doiTen:hover{
+.doiTen:hover{
     background: #c9c9cd;
 }
-#xoa{ 
+.xoa{ 
     padding:0px 5px;
     width:auto;
     cursor:pointer;
 }
-#xoa:hover{
+.xoa:hover{
     background: #c9c9cd;
 }
-#taofilemoi{
+.taofilemoi{
     padding:0px 3px;
     width:auto;
     cursor:pointer;
 }
-#taofilemoi:hover{
+.taofilemoi:hover{
     background: #c9c9cd;
 }
-
-
-/* file */
-/* #fileTree1 {
-    margin-left: 1%;      
-    padding: 10px;
-    height: 1980px;          
-    background-color: #f5f6fa;
-    width:100%;
-    margin-top: 15px;
-} */
-#khungfile{
-    width:25.5%;
-    height:35px;
+.khungfile{
+    width:80%;
+    height:auto;
     border:1px solid gray;
     border-radius: 10px;
     background-color: #f2f2f5;
-    cursor: pointer;
-    padding-left: 10px;
     box-shadow:5px 10px #c9c9cd;
-    display:flex;
-    margin-top: 25px;
-    margin-left: 250px;
+    margin-top: 20px;
+    margin-left:50px;
 }
-#tenfile{
+.khung1{
+    width:100%;
+    height:35px;
+    display:flex;
+}
+.tenfile{
     width:43%;
     height:20px;
     border-radius: 10px;
@@ -229,29 +223,42 @@ li:hover{
     margin-top:3%;
     margin-left: 0%;
     padding-left: 5px;
+    cursor: pointer;
 }
-#fileTree1 button{
+button{
     height:20px;
     border:1px solid gray;
     border-radius: 10px;
     margin-top:3%;
 }
-#doiTen{
+.doiTen{
     margin-left: 10px;
     padding:0px 3px;
     width:auto;
     cursor:pointer;
 }
-#doiTen:hover{
+.doiTen:hover{
     background: #c9c9cd;
 }
-#xoa{ 
+.xoa{ 
     padding:0px 5px;
     width:auto;
     cursor:pointer;
 }
-#xoa:hover{
+.xoa:hover{
     background: #c9c9cd;
+}
+.ndfile{
+    width:100%;
+    height:auto;
+    box-sizing: border-box;
+    padding:5px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    background-color: white;
+    overflow-wrap: break-word;
+    display:none;
+    cursor:pointer;
 }
 .taofile{
     position:relative;
