@@ -86,12 +86,13 @@ li:hover{
     display:flex;
     border-radius: 2px;
     flex-wrap: wrap;
+    color:rgb(20, 57, 106);
 }
 .taofolder{
     position:relative;
     width:30%;
     height:60px;
-    border:1px solid rgb(205, 206, 206);
+    border:1px solid gray;
     border-radius: 10px;
     background-color: #f2f2f5;
     box-shadow:5px 10px #c9c9cd;
@@ -101,7 +102,7 @@ li:hover{
 }
 .taofolder input{
     position:absolute;
-    border: 1px solid gray;
+    border: 1px solid rgb(207, 207, 208);
     width: 65%;
     height: 30px;
     color:rgb(20, 57, 106);
@@ -152,9 +153,9 @@ li:hover{
     width:100%;
     height:40px;
     display:flex;
-    border:1px solid gray;
+    border:1px solid rgb(238, 254, 254);
     border-radius: 10px;
-    background-color: #f2f2f5;
+    background-color: rgb(202, 235, 246);
     box-shadow:5px 10px #c9c9cd;
     padding-left: 5px;
     padding-right: 5px;
@@ -163,34 +164,35 @@ li:hover{
     width:43%;
     height:20px;
     border-radius: 10px;
-    background-color: #f2f2f5;
+    background-color: rgb(202, 235, 246);
     margin-top:3%;
     margin-left: 0%;
     padding-left: 5px;
     cursor: pointer;
 }
-#folderTree button{
+.khung2 button{
     height:20px;
-    border:1px solid gray;
+    border:1px solid rgb(198, 228, 249);
     border-radius: 10px;
     margin-top:3%;
+    background-color:lightblue;
 }
-.doiTen{
+.khung2 .doiTen{
     margin-left: 10px;
     padding:0px 3px;
     width:auto;
     cursor:pointer;
 }
-.doiTen:hover{
-    background: #c9c9cd;
+.khung2 .doiTen:hover{
+    background-color:rgb(231, 244, 248);
 }
-.xoa{ 
+.khung2 .xoa{ 
     padding:0px 5px;
     width:auto;
     cursor:pointer;
 }
-.xoa:hover{
-    background: #c9c9cd;
+.khung2 .xoa:hover{
+    background-color:rgb(231, 244, 248);
 }
 .taofilemoi{
     padding:0px 3px;
@@ -198,14 +200,14 @@ li:hover{
     cursor:pointer;
 }
 .taofilemoi:hover{
-    background: #c9c9cd;
+    background-color:rgb(231, 244, 248);
 }
 .khungfile{
     width:80%;
     height:auto;
     border:1px solid gray;
     border-radius: 10px;
-    background-color: #f2f2f5;
+    background-color:rgb(231, 244, 248);
     box-shadow:5px 10px #c9c9cd;
     margin-top: 20px;
     margin-left:50px;
@@ -219,34 +221,35 @@ li:hover{
     width:43%;
     height:20px;
     border-radius: 10px;
-    background-color: #f2f2f5;
+    background-color: rgb(231, 244, 248);
     margin-top:3%;
     margin-left: 0%;
     padding-left: 5px;
     cursor: pointer;
 }
-button{
+.khung1 button{
     height:20px;
-    border:1px solid gray;
+    border:1px solid rgb(198, 228, 249);
     border-radius: 10px;
     margin-top:3%;
+    background-color:rgb(202, 235, 246);
 }
-.doiTen{
+.khung1 .doiTen{
     margin-left: 10px;
     padding:0px 3px;
     width:auto;
     cursor:pointer;
 }
-.doiTen:hover{
-    background: #c9c9cd;
+.khung1 .doiTen:hover{
+    background: lightblue;
 }
-.xoa{ 
+.khung1 .xoa{ 
     padding:0px 5px;
     width:auto;
     cursor:pointer;
 }
-.xoa:hover{
-    background: #c9c9cd;
+.khung1 .xoa:hover{
+    background: lightblue;
 }
 .ndfile{
     width:100%;
