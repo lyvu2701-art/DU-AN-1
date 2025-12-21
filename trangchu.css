@@ -210,7 +210,7 @@ li:hover{
     background-color:rgb(231, 244, 248);
     box-shadow:5px 10px #c9c9cd;
     margin-top: 20px;
-    margin-left:50px;
+    /* margin-left:50px; */
 }
 .khung1{
     width:100%;
