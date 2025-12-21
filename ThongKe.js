@@ -1,10 +1,6 @@
 let DaDangNhap = localStorage.getItem("DaDangNhap");
 let users = JSON.parse(localStorage.getItem("users"));
 let user = users[DaDangNhap];
-/*if(!DaDangNhap || !user){
-    alert("Vui lòng đăng nhập để xem lịch sử hoạt động!");
-    window.location.href = "trang1.html";
-}*/
 let root1 = users[DaDangNhap].drive;
 function hienThi(){
     let demfolder = 0;
